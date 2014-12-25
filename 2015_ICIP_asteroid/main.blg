@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: IEEEbib.bst
+Database file #1: asteroid.bib
+Warning--entry type for "wise2014" isn't style-file defined
+--line 94 of file asteroid.bib
+Warning--entry type for "neat2014" isn't style-file defined
+--line 102 of file asteroid.bib
+You've used 12 entries,
+            1838 wiz_defined-function locations,
+            531 strings with 5871 characters,
+and the built_in function-call counts, 3107 in all, are:
+= -- 256
+> -- 196
+< -- 2
++ -- 70
+- -- 58
+* -- 281
+:= -- 519
+add.period$ -- 13
+call.type$ -- 12
+change.case$ -- 12
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 110
+empty$ -- 268
+format.name$ -- 58
+if$ -- 668
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 10
+newline$ -- 61
+num.names$ -- 12
+pop$ -- 31
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 42
+stack$ -- 0
+substring$ -- 197
+swap$ -- 29
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 30
+width$ -- 14
+write$ -- 131
+(There were 2 warnings)
