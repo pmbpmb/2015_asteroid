@@ -36,6 +36,68 @@ An example of ground truth trajectory derived from the simulated MWIR imagery is
 \label{ssec:real}
 
 \subsubsection{NEAT}
+The following figures show the results at all stages of the pipeline for one triplet of images of the 2002-CY46 asteroid obtained from the NEAT [24] survey.  
+\begin{figure*}
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{Figures/NEAT1.pdf}
+\endminipage\hfill
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{Figures/NEAT2.pdf}
+\endminipage\hfill
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{Figures/NEAT3.pdf}
+\endminipage
+\caption{2002 CY46 Triplet Near Earth Asteroid Tracking (NEAT) system archive}
+\label{fig:NEAT_Images}
+\end{figure*}
+
+
+\begin{figure}[b]
+\minipage{0.24\textwidth}
+  \includegraphics[width=\linewidth]{Figures/NEATImageReg12.pdf}
+\endminipage\hfill
+\minipage{0.24\textwidth}
+  \includegraphics[width=\linewidth]{Figures/NEATImageReg32.pdf}
+\endminipage\hfill
+\caption{Image Registration results for the CY46 Triplet.  Left: Image-1 registered to Image-2. Right: Image-3 registered to Image-2.}
+\label{fig:NEAT_Registration}
+\end{figure}
+
+\begin{figure*}
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{Figures/NEATImageDiff1.pdf}
+\endminipage\hfill
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{Figures/NEATImageDiff2.pdf}
+\endminipage\hfill
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{Figures/NEATImageDiff3.pdf}
+\endminipage
+\caption{Image Differencing results for the CY46 Triplet. (Artifacts such as crater-like formations are seen in the difference images above. This is the result of some celestial bodies being over-exposed.)}
+\label{fig:NEAT_ImgDiff1}
+\end{figure*}
+
+\begin{figure*}
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{Figures/NEATFilteredCentroids1.pdf}
+\endminipage\hfill
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{Figures/NEATFilteredCentroids2.pdf}
+\endminipage\hfill
+\minipage{0.33\textwidth}
+  \includegraphics[width=\linewidth]{Figures/NEATFilteredCentroids3.pdf}
+\endminipage
+\caption{Image Differencing results for the CY46 Triplet. Filtered centroids in each image of the sequence.)}
+\label{fig:NEAT_ImgDiff2}
+\end{figure*}
+
+\begin{figure}[b]
+\minipage{0.45\textwidth}
+  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
+\endminipage\hfill
+\caption{Trajectory Detection for the CY46 Triplet. (Asteroid trajectory detected is shown in green. True location is in red. 3 Images of the triplet are super-imposed here after registration and thresholding for ease of visualization.)}
+\label{fig:NEAT}
+\end{figure}
 \subsubsection{CATALINA}
 
 
