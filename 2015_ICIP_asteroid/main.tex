@@ -73,14 +73,15 @@ In Section~\ref{sec:approach} we describe an agile pipeline that can be deployed
 
 We describe the main components of our image processing pipeline (shown also in the flow chart in figure \ref{IPP}) addressing detection and linking of asteroids seen in images acquired from space-based platforms.  At a high level, the pipeline is summarized as follows: as input to the pipeline is a sequence of time-lapse images. Pre-processing and image registration are used to bring the images into alignment with a common image of reference.  Detection of bright bodies is done via thresholding, followed by logical differencing between each image and a reference image containing objects that are common to all registered images in the sequence of images.  After differencing, which allows us to detect moving objects, we use an additional step to filter detections based on size and shape considerations (using tools such as connected components and morphological filters).  A list of detection coordinates is then generated.  Candidate trajectories are then generated for these coordinates by checking rectilinearity (via Principal Component Analysis).  A last verification step further checks additional conditions such as the fact that candidate trajectories must be composed of temporally consecutive mover observations.  Each module that is detailed next. 
 
-\tikzstyle{block} = [rectangle, minimum width=2cm, minimum height=1cm, text centered, text width=2cm, draw=black, fill=blue!15]
+\tikzstyle{block} = [rectangle, minimum width=2cm, minimum height=2cm, text centered, text width=1.8cm, draw=black, fill=blue!15]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 \begin{figure}[b]
-\begin{tikzpicture}[node distance=2.7cm]
-\node (proc) [block] {Image Preprocessing};
+\begin{tikzpicture}[node distance=2.3cm]
+\node (proc) [block] {Image Pre-Processing};
 \node (reg) [block, right of=proc] {Image Registration};
 \node (diff) [block, right of=reg] {Logical Differencing};
-\node (det) [block, below of=diff, yshift=1.2cm] {Trajectory Detection};
+%\node (det) [block, right of=diff, yshift=1.2cm] {Trajectory Detection};
+\node (det) [block, right of=diff] {Trajectory Detection};
 \draw [arrow] (proc) -- (reg);
 \draw [arrow] (reg) -- (diff);
 \draw [arrow] (diff) -- (det);
