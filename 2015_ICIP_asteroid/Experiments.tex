@@ -51,7 +51,56 @@ The following figures show the results at all stages of the pipeline for one tri
 %\label{fig:NEAT_Images}
 %\end{figure*}
 
-\begin{figure*}[h]
+\newcommand{\imgWidth}{0.14\textwidth}
+\begin{figure}[h]
+\begin{center}$
+\begin{array}{c@{\hspace{0.5em}}c@{\hspace{0.5em}}c}
+\includegraphics[width=\imgWidth]{Figures/NEAT1.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEAT2.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEAT3.pdf} \\
+\includegraphics[width=\imgWidth]{Figures/NEATImageReg12.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEATImageReg32.pdf} \\
+\includegraphics[width=\imgWidth]{Figures/NEATImageDiff1.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEATImageDiff2.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEATImageDiff3.pdf} \\
+\includegraphics[width=\imgWidth]{Figures/NEATFilteredCentroids1.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEATFilteredCentroids2.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEATFilteredCentroids3.pdf}
+\end{array}$
+\end{center}
+\caption{Option 1. Image Processing Pipeline results. 
+First row: 2002 CY46 Triplet images taken 10 minutes apart. Near Earth Asteroid Tracking (NEAT) system archive. 
+Second row: Image Registration results for the CY46 Triplet.  Left: Image-1 registered to Image-2. Right: Image-3 registered to Image-2.
+Third row: Image Differencing results for the CY46 Triplet. (Artifacts such as crater-like formations are seen in the difference images above. This is the result of some celestial bodies being over-exposed.) 
+Fourth row: Image Differencing results for the CY46 Triplet. Filtered centroids in each image of the sequence.)}
+\end{figure}
+
+\newcommand{\imgWidthMedium}{0.23\textwidth}
+\begin{figure*}[t]
+\begin{center}$
+\begin{array}{c@{\hspace{.5em}}c@{\hspace{0.5em}}c@{\hspace{0.5em}}c}
+\includegraphics[width=\imgWidthMedium]{Figures/NEAT1.pdf} &
+\includegraphics[width=\imgWidthMedium]{Figures/NEATImageReg12.pdf} &
+\includegraphics[width=\imgWidthMedium]{Figures/NEATImageDiff1.pdf} &
+\includegraphics[width=\imgWidthMedium]{Figures/NEATFilteredCentroids1.pdf} \\
+\includegraphics[width=\imgWidthMedium]{Figures/NEAT2.pdf} &
+ &
+\includegraphics[width=\imgWidthMedium]{Figures/NEATImageDiff2.pdf} &
+\includegraphics[width=\imgWidthMedium]{Figures/NEATFilteredCentroids2.pdf} \\
+\includegraphics[width=\imgWidthMedium]{Figures/NEAT3.pdf} &
+\includegraphics[width=\imgWidthMedium]{Figures/NEATImageReg32.pdf} &
+\includegraphics[width=\imgWidthMedium]{Figures/NEATImageDiff3.pdf} &
+\includegraphics[width=\imgWidthMedium]{Figures/NEATFilteredCentroids3.pdf} 
+\end{array}$
+\end{center}
+\caption{ Option 2. Image Processing Pipeline results. 
+First column: 2002 CY46 Triplet images taken 10 minutes apart. Near Earth Asteroid Tracking (NEAT) system archive. 
+Second Column: Image Registration results for the CY46 Triplet.  Top: Image-1 registered to Image-2. Bottom: Image-3 registered to Image-2.
+Third Column: Image Differencing results for the CY46 Triplet. (Artifacts such as crater-like formations are seen in the difference images above. This is the result of some celestial bodies being over-exposed.) 
+Fourth Column: Image Differencing results for the CY46 Triplet. Filtered centroids in each image of the sequence.)}
+\end{figure*}
+
+\begin{figure*}[t]
 \begin{center}$
 \begin{array}{ccc}
 \includegraphics[width=0.33\textwidth]{Figures/NEAT1.pdf} &
@@ -67,54 +116,7 @@ The following figures show the results at all stages of the pipeline for one tri
 \includegraphics[width=0.33\textwidth]{Figures/NEATFilteredCentroids3.pdf}
 \end{array}$
 \end{center}
-\caption{Option 1. Image Processing Pipeline results. 
-First column: 2002 CY46 Triplet images taken 10 minutes apart. Near Earth Asteroid Tracking (NEAT) system archive. 
-Second Column: Image Registration results for the CY46 Triplet.  Top: Image-1 registered to Image-2. Bottom: Image-3 registered to Image-2.
-Third Column: Image Differencing results for the CY46 Triplet. (Artifacts such as crater-like formations are seen in the difference images above. This is the result of some celestial bodies being over-exposed.) 
-Fourth Column: Image Differencing results for the CY46 Triplet. Filtered centroids in each image of the sequence.)}
-\end{figure*}
-
-\begin{figure}[h]
-\begin{center}$
-\begin{array}{ccc}
-\includegraphics[width=0.13\textwidth]{Figures/NEAT1.pdf} &
-\includegraphics[width=0.13\textwidth]{Figures/NEAT2.pdf} &
-\includegraphics[width=0.13\textwidth]{Figures/NEAT3.pdf} \\
-\includegraphics[width=0.13\textwidth]{Figures/NEATImageReg12.pdf} &
-\includegraphics[width=0.13\textwidth]{Figures/NEATImageReg32.pdf} \\
-\includegraphics[width=0.13\textwidth]{Figures/NEATImageDiff1.pdf} &
-\includegraphics[width=0.13\textwidth]{Figures/NEATImageDiff2.pdf} &
-\includegraphics[width=0.13\textwidth]{Figures/NEATImageDiff3.pdf} \\
-\includegraphics[width=0.13\textwidth]{Figures/NEATFilteredCentroids1.pdf} &
-\includegraphics[width=0.13\textwidth]{Figures/NEATFilteredCentroids2.pdf} &
-\includegraphics[width=0.13\textwidth]{Figures/NEATFilteredCentroids3.pdf}
-\end{array}$
-\end{center}
-\caption{Option 2. Image Processing Pipeline results. 
-First row: 2002 CY46 Triplet images taken 10 minutes apart. Near Earth Asteroid Tracking (NEAT) system archive. 
-Second row: Image Registration results for the CY46 Triplet.  Left: Image-1 registered to Image-2. Right: Image-3 registered to Image-2.
-Third row: Image Differencing results for the CY46 Triplet. (Artifacts such as crater-like formations are seen in the difference images above. This is the result of some celestial bodies being over-exposed.) 
-Fourth row: Image Differencing results for the CY46 Triplet. Filtered centroids in each image of the sequence.)}
-\end{figure}
-
-\begin{figure*}[h]
-\begin{center}$
-\begin{array}{cccc}
-\includegraphics[width=0.23\textwidth]{Figures/NEAT1.pdf} &
-\includegraphics[width=0.23\textwidth]{Figures/NEATImageReg12.pdf} &
-\includegraphics[width=0.23\textwidth]{Figures/NEATImageDiff1.pdf} &
-\includegraphics[width=0.23\textwidth]{Figures/NEATFilteredCentroids1.pdf} \\
-\includegraphics[width=0.23\textwidth]{Figures/NEAT2.pdf} &
- &
-\includegraphics[width=0.23\textwidth]{Figures/NEATImageDiff2.pdf} &
-\includegraphics[width=0.23\textwidth]{Figures/NEATFilteredCentroids2.pdf} \\
-\includegraphics[width=0.23\textwidth]{Figures/NEAT3.pdf} &
-\includegraphics[width=0.23\textwidth]{Figures/NEATImageReg32.pdf} &
-\includegraphics[width=0.23\textwidth]{Figures/NEATImageDiff3.pdf} 
-\includegraphics[width=0.23\textwidth]{Figures/NEATFilteredCentroids3.pdf} 
-\end{array}$
-\end{center}
-\caption{Image Processing Pipeline results. 
+\caption{Option 3. Image Processing Pipeline results. 
 First column: 2002 CY46 Triplet images taken 10 minutes apart. Near Earth Asteroid Tracking (NEAT) system archive. 
 Second Column: Image Registration results for the CY46 Triplet.  Top: Image-1 registered to Image-2. Bottom: Image-3 registered to Image-2.
 Third Column: Image Differencing results for the CY46 Triplet. (Artifacts such as crater-like formations are seen in the difference images above. This is the result of some celestial bodies being over-exposed.) 
