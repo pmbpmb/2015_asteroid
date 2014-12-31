@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  31 DEC 2014 06:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  31 DEC 2014 06:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -767,12 +767,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3 <./Figures/Simulated_130_12.pdf> <./Figures/TrueTrajectory_130.pdf> <./Figur
 es/Lines_011_016_021.pdf> <./Figures/Lines_011_016_021_026.pdf>]) (./main.bbl
-[4 <./Figures/Detections_Triplets_Color_f15.pdf> <./Figures/Detections_Quad_Col
-or_f15.pdf> <./Figures/NEAT1.pdf> <./Figures/NEAT2.pdf> <./Figures/NEAT3.pdf> <
-./Figures/NEATImageReg12.pdf> <./Figures/NEATImageReg32.pdf> <./Figures/NEATIma
-geDiff1.pdf> <./Figures/NEATImageDiff2.pdf> <./Figures/NEATImageDiff3.pdf> <./F
-igures/NEATFilteredCentroids1.pdf> <./Figures/NEATFilteredCentroids2.pdf> <./Fi
-gures/NEATFilteredCentroids3.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./Figures/Detections_Triplets_Color_f15.pdf> <./Figures/Detections_Quad_Co
+lor_f15.pdf> <./Figures/NEAT1.pdf> <./Figures/NEAT2.pdf> <./Figures/NEAT3.pdf> 
+<./Figures/NEATImageReg12.pdf> <./Figures/NEATImageReg32.pdf> <./Figures/NEATIm
+ageDiff1.pdf> <./Figures/NEATImageDiff2.pdf> <./Figures/NEATImageDiff3.pdf> <./
+Figures/NEATFilteredCentroids1.pdf> <./Figures/NEATFilteredCentroids2.pdf> <./F
+igures/NEATFilteredCentroids3.pdf>]
 Underfull \hbox (badness 1178) in paragraph at lines 36--41
 []\OT1/ptm/m/n/10 Toshifumi Yanag-i-sawa, At-sushi Naka-jima, Ken-ichi
  []
@@ -782,7 +784,7 @@ Underfull \hbox (badness 1178) in paragraph at lines 36--41
 Here is how much of TeX's memory you used:
  13140 strings out of 493117
  269522 string characters out of 6135433
- 316581 words of memory out of 5000000
+ 315592 words of memory out of 5000000
  16333 multiletter control sequences out of 15000+600000
  20508 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -800,7 +802,7 @@ ve/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/te
 xmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/
 fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on main.pdf (6 pages, 561559 bytes).
+Output written on main.pdf (6 pages, 561913 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  96 compressed objects within 1 object stream
