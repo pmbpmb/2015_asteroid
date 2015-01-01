@@ -45,7 +45,7 @@ B_\lambda(T)= \epsilon	\frac{2hc^2}{\lambda^5} \frac{1}{e^{\frac{hc}{\lambda k_B
 %
 \begin{figure}[t]
 \begin{center}$
-\begin{array}{c@{\hspace{0.5em}}c@{\hspace{0.5em}}}
+\begin{array}{c@{\hspace{0.2em}}c@{\hspace{0.2em}}}
 \includegraphics[width=0.23\textwidth]{Figures/Simulated_130_12.pdf} &
 \includegraphics[width=0.23\textwidth]{Figures/TrueTrajectory_130.pdf} 
 \end{array}$
@@ -58,33 +58,37 @@ B_\lambda(T)= \epsilon	\frac{2hc^2}{\lambda^5} \frac{1}{e^{\frac{hc}{\lambda k_B
 \begin{figure}[h]
 \vspace{-0.3cm}
 \begin{center}$
-\begin{array}{c@{\hspace{0.5em}}c@{\hspace{0.5em}}}
+\begin{array}{c@{\hspace{0.2em}}c@{\hspace{0.2em}}}
 \includegraphics[width=0.23\textwidth]{Figures/Lines_011_016_021.pdf} &
 \includegraphics[width=0.23\textwidth]{Figures/Lines_011_016_021_026.pdf} 
 \end{array}$
 \end{center}
+\vspace{-0.7cm}
 \caption[caption]{The trajectories found by the pipeline are shown in green. The true location of the asteroid is marked in red.\\\hspace{\textwidth} Left: Trajectory Detection on a simulated triplet.  Right: Trajectory Detection on a quadruplet. Adding one more image to the triplet eliminates the false positives.}
 \label{Trajectories_Sim}
 \end{figure}
 %
 \begin{figure}[h]
 \begin{center}$
-\begin{array}{c@{\hspace{0.5em}}c@{\hspace{0.5em}}}
+\begin{array}{c@{\hspace{0.2em}}c@{\hspace{0.2em}}}
 \includegraphics[width=0.23\textwidth]{Figures/Detections_Triplets_Color_f15.pdf} &
 \includegraphics[width=0.23\textwidth]{Figures/Detections_Quad_Color_f15.pdf} 
 \end{array}$
 \end{center}
+\vspace{-0.7cm}
 \caption{Left: The number of detections at various stages of the pipeline for triplets of images. Right:  The number of detections at various stages of the pipeline for quadruplets of images.}
 \end{figure}
 \begin{figure}[h]
 \begin{center}$
-\begin{array}{c@{\hspace{0.5em}}c@{\hspace{0.5em}}}
+\begin{array}{c@{\hspace{0.2em}}c@{\hspace{0.2em}}}
 \includegraphics[width=0.23\textwidth]{Figures/ROC_Triplets_130_pchip_f20.pdf} &
 \includegraphics[width=0.23\textwidth]{Figures/ROC_Triplets_130_pchip_f15.pdf} 
 \end{array}$
 \end{center}
+\vspace{-0.7cm}
 \caption{Left: ROC detections. Right:  ROC stars + asteroids.}
 \label{fig:ROC}
+\vspace{-0.3cm}
 \end{figure} 
 \subsection{Real Imagery}
 \label{ssec:real}
@@ -126,14 +130,29 @@ Figures \ref{IPP_NEAT_Layout1} and \ref{fig:IPP_NEAT_Trajectory} show the result
 \includegraphics[width=\imgWidth]{Figures/NEATFilteredCentroids3.pdf}
 \end{array}$
 \end{center}
+\vspace{-0.7cm}
 \caption[caption]{Image Processing Pipeline results shown on 2002 NEAT data. 
 (row 1):  input image triplet (CY46) taken approx. 10 minutes apart. 
 (row 2): Image Registration. Left: Image-1 registered to Image-2. Right: Image-3 registered to Image-2. 
 %\\\hspace{\textwidth} 
 (row 3): Image Differencing: Artifacts such as crater-like formations are seen in the difference images above. This is the result of some celestial bodies being over-exposed.) 
 %\\\hspace{\textwidth} 
-(row 4): Image Differencing:Filtered centroids shown in each image of the sequence.)}
+(row 4): Image Differencing :Filtered centroids shown in each image of the sequence.)}
 \label{IPP_NEAT_Layout1}
+\end{figure}
+
+\begin{figure}[h]
+%\minipage{0.40\textwidth}
+%  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
+%\endminipage\hfill
+\vspace{-0.7cm}
+\begin{center}
+\includegraphics[width=0.33\textwidth]{Figures/NEATLines_LogicalImg.pdf}
+\end{center}
+\vspace{-0.7cm}
+\caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. 3 Images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
+\label{fig:IPP_NEAT_Trajectory}
+\vspace{-0.3cm}
 \end{figure}
 
 \newcommand{\imgWidthMedium}{0.23\textwidth}
@@ -154,7 +173,12 @@ Figures \ref{IPP_NEAT_Layout1} and \ref{fig:IPP_NEAT_Trajectory} show the result
 \includegraphics[width=\imgWidthMedium]{Figures/NEATFilteredCentroids3.pdf} 
 \end{array}$
 \end{center}
-\caption[caption]{Image Processing Pipeline results for the CY46 Triplet. First column: 2002 CY46 Triplet images taken approximately 10 minutes apart. Near Earth Asteroid Tracking (NEAT) system archive. \\\hspace{\textwidth} Second column: Image Registration results for the CY46 Triplet.  Top: Image-1 registered to Image-2. Middle: Image-2 Bottom: Image-3 registered to Image-2. \\\hspace{\textwidth} Third column: Image Differencing results for the CY46 Triplet. (Artifacts such as crater-like formations are seen in the difference images above. This is the result of some celestial bodies being over-exposed.) \\\hspace{\textwidth} Fourth column: Image Differencing results for the CY46 Triplet. Filtered centroids in each image of the sequence.)}
+\vspace{-0.7cm}
+\caption[caption]{Image Processing Pipeline results for the CY46 Triplet. (column 1): 2002 CY46 Triplet images taken approximately 10 minutes apart. Near Earth Asteroid Tracking (NEAT) system archive. 
+%\\\hspace{\textwidth} 
+(column 2): Image Registration results for the CY46 Triplet.  Top: Image-1 registered to Image-2. Middle: Image-2 Bottom: Image-3 registered to Image-2. 
+(column 3): Image Differencing results for the CY46 Triplet. (Artifacts such as crater-like formations are seen in the difference images above. This is the result of some celestial bodies being over-exposed.) 
+(column 4): Image Differencing results for the CY46 Triplet. Filtered centroids in each image of the sequence.)}
 \label{IPP_NEAT_Layout2}
 \end{figure*}
 
@@ -224,16 +248,7 @@ Figures \ref{IPP_NEAT_Layout1} and \ref{fig:IPP_NEAT_Trajectory} show the result
 %\label{fig:NEAT_ImgDiff2}
 %\end{figure*}
 
-\begin{figure}[h]
-%\minipage{0.40\textwidth}
-%  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
-%\endminipage\hfill
-\begin{center}
-\includegraphics[width=0.4\textwidth]{Figures/NEATLines_LogicalImg.pdf}
-\end{center}
-\caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. 3 Images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
-\label{fig:IPP_NEAT_Trajectory}
-\end{figure}
+
 \subsubsection{CATALINA}
 
 
