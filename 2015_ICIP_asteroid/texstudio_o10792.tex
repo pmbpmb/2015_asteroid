@@ -7,10 +7,18 @@
 \begin{document}
 	\maketitle
 	
-	\section*{3.4. Footprint characterization}
-The pipeline was tested on Matlab initially and then implemented in C++ for doing a benchmark analysis using certain performance metrics. The C++ code was run on a 8-core Intel processor(3rd generation) with clock speed of 2.3 GHz and an Intel VTune Amplifier XE 2015 profiler was used. The peak CPU usage was 12\%, peak private memory and peak working set memory usages were 99,212 kB and 84,740 kB respectively. The CPU time was 1.267 sec(spin time = 0.465 sec, effective time = 0.802 sec). A single CPU core was used during the 0.802 sec "effective time". \newline
+	\section*{3.4. Footprint Characterization}
+The pipeline was tested on Matlab initially and then implemented in C++ for doing a benchmark analysis using certain performance metrics. The C++ code was run on a 8-core Intel processor(3rd generation) with clock speed of 2.3 GHz and an Intel VTune Amplifier XE 2015 profiler was used. The peak CPU usage was 12\%, peak private memory and peak working set memory usages were 99,212 kB and 84,740 kB respectively. The CPU time observed was 1.267 sec (spin time = 0.465 sec, effective time = 0.802 sec). A single CPU core was used during the 0.802 sec "effective time". \newline
 
-These metrics were then extrapolated for a reference processor MCP750, (which is usually used for onboard flight applications)  having maximum clock speed of 466 MHz. We estimate performance time to be 3.96 sec on this processor and memory usage to remain same as that in our test. This is acceptable given MCP750 has upto 256 MB dynamic RAM and that we can still have sufficient memory available for additional necessary processes such as navigation, guidance, communication etc.
+These metrics were then extrapolated for a reference processor MCP750, (which is usually used for onboard flight applications)  having maximum clock speed of 466 MHz. We estimate performance time to be 3.96 sec on this processor and memory usage to remain same as that in our test.  This is acceptable given MCP750 has upto 256 MB dynamic RAM and that we can still have sufficient memory available for additional necessary processes such as navigation, guidance, communication etc onboard. It is known that power consumed by a chip is given by the following relation
+
+\begin{equation}
+P=CV^{2}f
+\end{equation}
+
+
+
+Using the dependence of consumed power(P) on supply voltage(related to second power of V), clock frequency(related to the first power of f) and chip capacitance(related to the first power of C) the CPU usage is predicted to be 1.78\% on MCP750, given that maximum power usage on MCP750 and Intel processor is 8.25 W and 3.7 W respectively, assuming that the effective capacitances of the two processors are of same order. Here the specifications of the MCP750 have been refered from the datasheet supplied by the manufacturer(could add as Ref). 
 
 
 	
