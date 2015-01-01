@@ -76,7 +76,16 @@ B_\lambda(T)= \epsilon	\frac{2hc^2}{\lambda^5} \frac{1}{e^{\frac{hc}{\lambda k_B
 \end{center}
 \caption{Left: The number of detections at various stages of the pipeline for triplets of images. Right:  The number of detections at various stages of the pipeline for quadruplets of images.}
 \end{figure}
- 
+\begin{figure}[h]
+\begin{center}$
+\begin{array}{c@{\hspace{0.5em}}c@{\hspace{0.5em}}}
+\includegraphics[width=0.24\textwidth]{Figures/ROC_Triplets_130_pchip_f20.pdf} &
+\includegraphics[width=0.24\textwidth]{Figures/ROC_Triplets_130_pchip_f15.pdf} 
+\end{array}$
+\end{center}
+\caption{Left: ROC detections. Right:  ROC stars + asteroids.}
+\label{fig:ROC}
+\end{figure} 
 \subsection{Real Imagery}
 \label{ssec:real}
 
@@ -229,13 +238,6 @@ Figures \ref{IPP_NEAT_Layout1} and \ref{fig:IPP_NEAT_Trajectory} show the result
 
 
 \subsection{performance characterization}
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.4\textwidth]{Figures/ROC_Triplets_130_Option1_pchip_f15.pdf}
-\end{center}
-\caption{ROC.}
-\label{fig:ROC_Simulated_Triplet}
-\end{figure}
 
 We use the following metrics for algorithm testing and validation.  These are used to characterize the performance of the algorithm for the three successive stages: the initial detection of objects, the detection of moving objects and the detection of trajectories:
 1.	Precision: The fraction of retrieved/detected objects (celestial bodies, moving objects, trajectories) that are relevant, i.e. correspond to correct detections.
