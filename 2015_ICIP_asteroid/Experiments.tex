@@ -118,7 +118,7 @@ Figures \ref{IPP_NEAT_Layout1} and \ref{fig:IPP_NEAT_Trajectory} show the result
 %\caption{2002 CY46 Triplet Near Earth Asteroid Tracking (NEAT) system archive}
 %\label{fig:NEAT_Images}
 %\end{figure*}
-
+\vspace{-0.4cm}
 \newcommand{\imgWidth}{0.15\textwidth}
 \begin{figure}[h]
 \begin{center}$
@@ -149,6 +149,31 @@ Figures \ref{IPP_NEAT_Layout1} and \ref{fig:IPP_NEAT_Trajectory} show the result
 \end{figure}
 
 \begin{figure}[h]
+\begin{center}$
+\begin{array}{@{\hspace{0.2em}}c@{\hspace{0.3em}}c@{\hspace{0.3em}}c}
+\includegraphics[width=\imgWidth]{Figures/CSS_100_5000_1.pdf} &
+\includegraphics[width=\imgWidth]{Figures/CSS_100_5000_2.pdf} &
+\includegraphics[width=\imgWidth]{Figures/CSS_100_5000_3.pdf} \\
+\includegraphics[width=\imgWidth]{Figures/NEATImageReg12.pdf} &
+\includegraphics[width=\imgWidth]{Figures/CSS_100_5000_2.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEATImageReg32.pdf} \\
+\includegraphics[width=\imgWidth]{Figures/NEATImageDiff1.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEATImageDiff2.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEATImageDiff3.pdf} 
+\end{array}$
+\end{center}
+\vspace{-0.7cm}
+\caption[caption]{Image Processing Pipeline results shown on Catalina Sky Survey data. 
+(row 1):  input image triplet taken approx. 10 minutes apart. 
+(row 2): Image Registration. Left: Image-1 registered to Image-2. Right: Image-3 registered to Image-2. 
+%\\\hspace{\textwidth} 
+(row 3): Image Differencing results }
+%\\\hspace{\textwidth} 
+\label{IPP_Catalina_Layout1}
+\end{figure}
+
+
+\begin{figure}[h]
 %\minipage{0.40\textwidth}
 %  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
 %\endminipage\hfill
@@ -159,6 +184,20 @@ Figures \ref{IPP_NEAT_Layout1} and \ref{fig:IPP_NEAT_Trajectory} show the result
 \vspace{-0.7cm}
 \caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. 3 Images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
 \label{fig:IPP_NEAT_Trajectory}
+\vspace{-0.3cm}
+\end{figure}
+
+\begin{figure}[h]
+%\minipage{0.40\textwidth}
+%  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
+%\endminipage\hfill
+\vspace{-0.7cm}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{Figures/NEATLines_LogicalImg.pdf}
+\end{center}
+\vspace{-0.7cm}
+\caption{Trajectory Detection for the CSS Triplet. Asteroid trajectory detected is shown in green. True location is in red. 3 Images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
+\label{fig:IPP_CSS_Trajectory}
 \vspace{-0.3cm}
 \end{figure}
 
