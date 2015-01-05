@@ -38,6 +38,23 @@ If we assume 100\% processor utilization on MCP750 then, IPC_{MCP} = 1.13. $Thus
 \begin{eqnarray}
 $\tau$_{MCP}=\frac{0.802 \times 0.12 \times 0.581^{-1} \times 2.3 \times 10^{9} \times 0.573}{1.13 \times 466\times 10^{6}} = 0.414 sec
 \end{eqnarray}\newline
+
+This could further be extrapolated to find performance time on MCP750 for other values of CPU utilization.\newline
+
+\begin{table}[h]
+	\centering
+
+	\begin{tabular}{ |l|l| }
+		\hline
+		\% CPU Utilization & Performance time(sec)\\ \hline
+		50 & 0.828 \\ \hline
+		12 & 4.968 \\ \hline
+		10 & 4.14 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\newline
 In the above calculation the CPU frequency ratio measured on the Intel processor has been multiplied to make use of the nominal CPU clock frequency on that processor. We predict the memory usage to remain same as that in our test.  This is acceptable given MCP750 has upto 256 MB dynamic RAM and that we can still have sufficient memory available for additional necessary processes such as navigation, guidance, communication etc onboard. Here the specifications of the MCP750 have been refered from the datasheet supplied by the manufacturer(\ref{}) and the measurements on the Intel processor was done using 'Open Hardware Monitor v.0.7.1-beta','Speedfan v.4.5' and 'Pc-Wizard v.2014.2.13'.\newline
 
 Ref:\newline
