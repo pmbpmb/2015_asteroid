@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  5 JAN 2015 12:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  5 JAN 2015 13:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -631,58 +631,58 @@ gures/ROC_StarAsteroid_130_pchip_f20.pdf> <./Figures/ROC_Triplets_130_pchip_f20
 <Figures/NEAT1.pdf, id=64, 433.62pt x 433.62pt>
 File: Figures/NEAT1.pdf Graphic file (type pdf)
  <use Figures/NEAT1.pdf>
-Package pdftex.def Info: Figures/NEAT1.pdf used on input line 132.
+Package pdftex.def Info: Figures/NEAT1.pdf used on input line 134.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
 <Figures/NEAT2.pdf, id=65, 433.62pt x 433.62pt>
 File: Figures/NEAT2.pdf Graphic file (type pdf)
  <use Figures/NEAT2.pdf>
-Package pdftex.def Info: Figures/NEAT2.pdf used on input line 133.
+Package pdftex.def Info: Figures/NEAT2.pdf used on input line 135.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
 <Figures/NEAT3.pdf, id=66, 433.62pt x 433.62pt>
 File: Figures/NEAT3.pdf Graphic file (type pdf)
  <use Figures/NEAT3.pdf>
-Package pdftex.def Info: Figures/NEAT3.pdf used on input line 134.
+Package pdftex.def Info: Figures/NEAT3.pdf used on input line 136.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
 <Figures/NEATImageReg12.pdf, id=67, 433.62pt x 433.62pt>
 File: Figures/NEATImageReg12.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageReg12.pdf>
-Package pdftex.def Info: Figures/NEATImageReg12.pdf used on input line 135.
+Package pdftex.def Info: Figures/NEATImageReg12.pdf used on input line 137.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 File: Figures/NEAT2.pdf Graphic file (type pdf)
  <use Figures/NEAT2.pdf>
-Package pdftex.def Info: Figures/NEAT2.pdf used on input line 136.
+Package pdftex.def Info: Figures/NEAT2.pdf used on input line 138.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
 <Figures/NEATImageReg32.pdf, id=68, 433.62pt x 433.62pt>
 File: Figures/NEATImageReg32.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageReg32.pdf>
-Package pdftex.def Info: Figures/NEATImageReg32.pdf used on input line 137.
+Package pdftex.def Info: Figures/NEATImageReg32.pdf used on input line 139.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
 <Figures/NEATImageDiff1.pdf, id=69, 433.62pt x 433.62pt>
 File: Figures/NEATImageDiff1.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageDiff1.pdf>
-Package pdftex.def Info: Figures/NEATImageDiff1.pdf used on input line 138.
+Package pdftex.def Info: Figures/NEATImageDiff1.pdf used on input line 140.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
 <Figures/NEATImageDiff2.pdf, id=70, 433.62pt x 433.62pt>
 File: Figures/NEATImageDiff2.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageDiff2.pdf>
-Package pdftex.def Info: Figures/NEATImageDiff2.pdf used on input line 139.
+Package pdftex.def Info: Figures/NEATImageDiff2.pdf used on input line 141.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
 <Figures/NEATImageDiff3.pdf, id=71, 433.62pt x 433.62pt>
 File: Figures/NEATImageDiff3.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageDiff3.pdf>
-Package pdftex.def Info: Figures/NEATImageDiff3.pdf used on input line 140.
+Package pdftex.def Info: Figures/NEATImageDiff3.pdf used on input line 142.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
 <Figures/NEATFilteredCentroids1.pdf, id=72, 433.62pt x 433.62pt>
@@ -690,7 +690,7 @@ File: Figures/NEATFilteredCentroids1.pdf Graphic file (type pdf)
 
 <use Figures/NEATFilteredCentroids1.pdf>
 Package pdftex.def Info: Figures/NEATFilteredCentroids1.pdf used on input line 
-141.
+143.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
 <Figures/NEATFilteredCentroids2.pdf, id=73, 433.62pt x 433.62pt>
@@ -698,7 +698,7 @@ File: Figures/NEATFilteredCentroids2.pdf Graphic file (type pdf)
 
 <use Figures/NEATFilteredCentroids2.pdf>
 Package pdftex.def Info: Figures/NEATFilteredCentroids2.pdf used on input line 
-142.
+144.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
 <Figures/NEATFilteredCentroids3.pdf, id=74, 433.62pt x 433.62pt>
@@ -706,26 +706,26 @@ File: Figures/NEATFilteredCentroids3.pdf Graphic file (type pdf)
 
 <use Figures/NEATFilteredCentroids3.pdf>
 Package pdftex.def Info: Figures/NEATFilteredCentroids3.pdf used on input line 
-143.
+145.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 157.
+               Default added (so using `!tbp') on input line 159.
 
 <Figures/NEATLines_LogicalImg.pdf, id=75, 433.62pt x 433.62pt>
 File: Figures/NEATLines_LogicalImg.pdf Graphic file (type pdf)
 
 <use Figures/NEATLines_LogicalImg.pdf>
 Package pdftex.def Info: Figures/NEATLines_LogicalImg.pdf used on input line 16
-3.
+5.
 (pdftex.def)             Requested size: 151.93925pt x 151.9413pt.
 
 <Figures/ImageDiff_CSS3.pdf, id=76, 433.62pt x 433.62pt>
 File: Figures/ImageDiff_CSS3.pdf Graphic file (type pdf)
 
 <use Figures/ImageDiff_CSS3.pdf>
-Package pdftex.def Info: Figures/ImageDiff_CSS3.pdf used on input line 174.
+Package pdftex.def Info: Figures/ImageDiff_CSS3.pdf used on input line 176.
 (pdftex.def)             Requested size: 151.93925pt x 151.9413pt.
 
 
@@ -733,62 +733,62 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: Figures/NEAT1.pdf Graphic file (type pdf)
 <use Figures/NEAT1.pdf>
-Package pdftex.def Info: Figures/NEAT1.pdf used on input line 228.
+Package pdftex.def Info: Figures/NEAT1.pdf used on input line 230.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEATImageReg12.pdf Graphic file (type pdf)
  <use Figures/NEATImageReg12.pdf>
-Package pdftex.def Info: Figures/NEATImageReg12.pdf used on input line 229.
+Package pdftex.def Info: Figures/NEATImageReg12.pdf used on input line 231.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEATImageDiff1.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageDiff1.pdf>
-Package pdftex.def Info: Figures/NEATImageDiff1.pdf used on input line 230.
+Package pdftex.def Info: Figures/NEATImageDiff1.pdf used on input line 232.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEATFilteredCentroids1.pdf Graphic file (type pdf)
  <use Figures/NEATFilteredCentroids1.pdf>
 Package pdftex.def Info: Figures/NEATFilteredCentroids1.pdf used on input line 
-231.
+233.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEAT2.pdf Graphic file (type pdf)
 
 <use Figures/NEAT2.pdf>
-Package pdftex.def Info: Figures/NEAT2.pdf used on input line 232.
+Package pdftex.def Info: Figures/NEAT2.pdf used on input line 234.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 
 <Figures/NEATImageReg22.pdf, id=77, 433.62pt x 433.62pt>
 File: Figures/NEATImageReg22.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageReg22.pdf>
-Package pdftex.def Info: Figures/NEATImageReg22.pdf used on input line 233.
+Package pdftex.def Info: Figures/NEATImageReg22.pdf used on input line 235.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEATImageDiff2.pdf Graphic file (type pdf)
  <use Figures/NEATImageDiff2.pdf>
-Package pdftex.def Info: Figures/NEATImageDiff2.pdf used on input line 234.
+Package pdftex.def Info: Figures/NEATImageDiff2.pdf used on input line 236.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEATFilteredCentroids2.pdf Graphic file (type pdf)
 
 <use Figures/NEATFilteredCentroids2.pdf>
 Package pdftex.def Info: Figures/NEATFilteredCentroids2.pdf used on input line 
-235.
+237.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEAT3.pdf Graphic file (type pdf)
  <use Figures/NEAT3.pdf>
-Package pdftex.def Info: Figures/NEAT3.pdf used on input line 236.
+Package pdftex.def Info: Figures/NEAT3.pdf used on input line 238.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEATImageReg32.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageReg32.pdf>
-Package pdftex.def Info: Figures/NEATImageReg32.pdf used on input line 237.
+Package pdftex.def Info: Figures/NEATImageReg32.pdf used on input line 239.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEATImageDiff3.pdf Graphic file (type pdf)
  <use Figures/NEATImageDiff3.pdf>
-Package pdftex.def Info: Figures/NEATImageDiff3.pdf used on input line 238.
+Package pdftex.def Info: Figures/NEATImageDiff3.pdf used on input line 240.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEATFilteredCentroids3.pdf Graphic file (type pdf)
 
 <use Figures/NEATFilteredCentroids3.pdf>
 Package pdftex.def Info: Figures/NEATFilteredCentroids3.pdf used on input line 
-239.
+241.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 ) (./main.bbl [4 <./Figures/NEAT1.pdf> <./Figures/NEAT2.pdf> <./Figures/NEAT3.p
 df> <./Figures/NEATImageReg12.pdf> <./Figures/NEATImageReg32.pdf> <./Figures/NE
@@ -840,7 +840,7 @@ dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
 /type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on main.pdf (7 pages, 710330 bytes).
+Output written on main.pdf (7 pages, 710319 bytes).
 PDF statistics:
  177 PDF objects out of 1000 (max. 8388607)
  113 compressed objects within 2 object streams
