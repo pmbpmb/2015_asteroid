@@ -102,7 +102,7 @@ Last, we show the Receiver Operating Characteristic (ROC) for simulated space-ba
 \label{fig:ROC}
 \vspace{-0.6cm}
 \end{figure} 
-\vspace{-0.7cm}
+\vspace{-0.5cm}
 \subsection{Real Imagery}
 
 \subsubsection{NEAT}
@@ -306,10 +306,61 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 The Catalina Sky Survey (CSS) \cite{css2014} is intended to discover NEOs, specifically potentially hazardous asteroids that pose risk to earth. Fig. \ref{IPP_Catalina_Layout1} and Fig. \ref{fig:IPP_CSS_Trajectory} show the results at all stages of the pipeline for one triplet of earth-based images from CSS.
 \vspace{-0.6cm}
 \subsection{Memory and CPU usage characterization}
-We include here some information showing  that this algorithm is deployable on a reference platform.
-Efforts are currently being conducted to translate this algorithm from C++ to an FPGA board. 
+We detail here information demonstrating  that this algorithm is compatible with deployment on a reference spacecraft platform such as the MCP750.
+%Efforts are currently being conducted to translate this algorithm from C++ to an FPGA board. 
 
-The pipeline was tested on Matlab initially and then implemented in C++ for doing a benchmark analysis using certain performance metrics. The C++ code was run on a 8-core Intel processor (3rd generation) with clock speed of 2.3 GHz and an Intel VTune Amplifier XE 2015 profiler was used. The peak CPU usage was 12\%, peak private memory and peak working set memory usages were 99,212 kB and 84,740 kB respectively. The CPU time observed was 1.267 sec (spin time = 0.465 sec, effective time = 0.802 sec). A single CPU core was used during the 0.802 sec "effective time". \newline
+%The pipeline was tested on Matlab initially and then implemented in C++ for doing a benchmark analysis using certain performance metrics. The C++ code was run on a 8-core Intel processor (3rd generation) with clock speed of 2.3 GHz and an Intel VTune Amplifier XE 2015 profiler was used. The peak CPU usage was 12\%, peak private memory and peak working set memory usages were 99,212 kB and 84,740 kB respectively. The CPU time observed was 1.267 sec (spin time = 0.465 sec, effective time = 0.802 sec). A single CPU core was used during the 0.802 sec "effective time". \newline
+%These metrics were then extrapolated for a reference processor MCP750, (which is usually used for onboard flight applications)  having maximum clock speed of 466 MHz. We estimate performance time to be 3.96 sec on this processor and memory usage to remain same as that in our test.  This is acceptable given MCP750 has upto 256 MB dynamic RAM and that we can still have sufficient memory available for additional necessary processes such as navigation, guidance, communication etc onboard. It is known that power consumed by a chip is given by the following relation
+%
+The pipeline was developed and tested on Matlab initialy and then implemented also in C++ for doing a benchmark analysis using certain performance metrics. The C++ code was run on a 8-core Intel processor (3rd generation) with clock speed of 2.3 GHz and an Intel VTune Amplifier XE 2015 profiler was used. The peak CPU usage was 12\%, peak private memory and peak working set memory usages were 99,212 kB and 84,740 kB respectively. The CPU time observed was 1.267 sec (spin time = 0.465 sec, effective time = 0.802 sec). A single CPU core was used during the 0.802 sec ''effective time'', and the processor was idle during the spin time. Therefore ''spin time'' has been used in the subsequent calculations. Some additional measurements made for the Intel processor are as follows:
+        Instructions executed = 2,868,100,000, 
+        CPI (cycles per instruction) = 0.581, 
+        CPU frequency ratio(ratio between actual and nominal CPU frequency) = 0.573.
+%        
+These metrics were then extrapolated for a reference processor having maximum clock speed of 466 MHz (MCP750). We estimate performance time using the relation:
+        
+        \begin{equation}
+        \tau = I\times IPC^{-1}\times C^{-1}
+        \end{equation}
+        \begin{equation}
+        IPC = 1/CPI
+        \end{equation}
+        %
+        \noindent where $\tau$ is the performance time, I is the total number of instructions executed, IPC is the instructions per cycle, C is the clock rate of the processor, CPI is the cylces per instruction.
+        Here we assume that the total number of instructions executed by both processors are same. The performance time on the MCP750 can be predicted as
+        
+        \begin{equation}
+        \tau_{MCP}=\frac{\tau_{Intel} \times IPC_{Intel} \times C_{Intel} }{IPC_{MCP} \times C_{MCP}}
+        \end{equation}
+        %
+        \noindent Using $\tau_{Intel} = 0.802$ sec, $IPS_{MCP,max} = 525\times 10^{6}$, we get,
+        %
+        \begin{equation}
+        IPC_{MCP,max} = \frac{IPS_{MCP,max}}{C_{MCP}} = \frac{525\times 10^{6}}{466\times 10^{6}}= 1.13
+        \end{equation}
+%
+        \noindent If we assume 100\% processor utilization on MCP750 then, $IPC_{MCP} = 1.13.$ Thus,
+%
+\begin{equation}
+        \tau_{MCP}=\frac{0.802 \times 0.12 \times 0.581^{-1} \times 2.3 \times 10^{9} \times 0.573}{1.13 \times 466\times 10^{6}} = 0.414 sec
+        \end{equation}\newline
+%
+\noindent  This could further be extrapolated to find performance time on MCP750 for other values of CPU utilization.\newline
+% 
+        \begin{table}[h]
+                \centering
+                
+                \begin{tabular}{ |l|l| }
+                        \hline
+                        \% CPU Utilization & Performance time(sec)\\ \hline
+                        50 & 0.828 \\ \hline
+                        12 & 4.968 \\ \hline
+                        10 & 4.14 \\
+                        \hline
+                \end{tabular}
+        \end{table}
+%
+\noindent
+ In the above calculation the CPU frequency ratio measured on the Intel processor has been multiplied to make use of the nominal CPU clock frequency on that processor. We predict the memory usage to remain same on MCP750 as that in our test.  This is acceptable for our application given MCP750 has up to 256 MB dynamic RAM and that we can still have sufficient memory available for additional necessary processes such as navigation, guidance, communication etc onboard. Here the specifications of the MCP750 have been referred from the processor \ref{} and the measurements on the Intel processor were done using 'Open Hardware Monitor v.0.7.1-beta','Speedfan v.4.5' and 'Pc-Wizard v.2014.2.13'.
 
-These metrics were then extrapolated for a reference processor MCP750, (which is usually used for onboard flight applications)  having maximum clock speed of 466 MHz. We estimate performance time to be 3.96 sec on this processor and memory usage to remain same as that in our test.  This is acceptable given MCP750 has upto 256 MB dynamic RAM and that we can still have sufficient memory available for additional necessary processes such as navigation, guidance, communication etc onboard. It is known that power consumed by a chip is given by the following relation
 
