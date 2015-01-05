@@ -25,7 +25,7 @@ We detail the experiments performed using a range of simulated space-based image
 
 Using RCE, asteroids are  modeled as spherical blackbody-like emitters (emissivity is less than 1), with a cross-sectional area that approximates the sizes of actual asteroids and surface temperatures typical of sun-illuminated asteroids in an Earth-like orbit.  Similar to the way stars are modeled, the radiation emitted is modeled using a form of Planck's equation:
 
-%\vspace{-0.9cm}
+\vspace{-0.3cm}
 \begin{equation}
 \label{eq:Planck}
 B_\lambda(T)= \epsilon	\frac{2hc^2}{\lambda^5} \frac{1}{e^{\frac{hc}{\lambda k_BT}} - 1}
@@ -75,8 +75,11 @@ Last, we show the Receiver Operating Characteristic (ROC) for simulated space-ba
 \vspace{-0.7cm}
 \caption[caption]{The trajectories found by the pipeline are shown in green. The true location of the asteroid is marked in red.\\\hspace{\textwidth} Left: Trajectory Detection on a simulated triplet.  Right: Trajectory Detection on a quadruplet. Adding one more image to the triplet eliminates the false positives.}
 \label{Trajectories_Sim}
+\vspace{-0.4cm}
 \end{figure}
 %
+
+\vspace{-0.4cm}
 \begin{figure}[h]
 \begin{center}$
 \begin{array}{@{\hspace{-0.7em}}c@{\hspace{0.2em}}c@{\hspace{0.2em}}}
@@ -120,7 +123,7 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 %\caption{2002 CY46 Triplet Near Earth Asteroid Tracking (NEAT) system archive}
 %\label{fig:NEAT_Images}
 %\end{figure*}
-\vspace{-0.4cm}
+\vspace{-0.5cm}
 \newcommand{\imgWidth}{0.15\textwidth}
 \begin{figure}[h]
 \begin{center}$
@@ -161,7 +164,7 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 \vspace{-0.7cm}
 \caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. 3 Images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
 \label{fig:IPP_NEAT_Trajectory}
-%\vspace{-0.3cm}
+\vspace{-0.3cm}
 \end{figure}
 
 \begin{figure}[h]
@@ -301,7 +304,7 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 
 \subsubsection{CATALINA}
 The Catalina Sky Survey (CSS) \cite{css2014} is intended to discover NEOs, specifically potentially hazardous asteroids that pose risk to earth. Fig. \ref{IPP_Catalina_Layout1} and Fig. \ref{fig:IPP_CSS_Trajectory} show the results at all stages of the pipeline for one triplet of earth-based images from CSS.
-\vspace{-0.4cm}
+\vspace{-0.6cm}
 \subsection{Memory and CPU usage characterization}
 We include here some information showing  that this algorithm is deployable on a reference platform.
 Efforts are currently being conducted to translate this algorithm from C++ to an FPGA board. 
