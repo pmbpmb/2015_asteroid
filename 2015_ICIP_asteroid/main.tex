@@ -17,7 +17,7 @@
 %
 % Single address.
 % ---------------
-\name{ P. Rajan$^{1}$ P. Burlina$^{1,2}$ M. Chen$^{2}$ B. Jedynak$^{3}$  C. Krupiartz$^{2}$ N. Mehta$^{2}$ A. Sinha$^{1}$ G. Hager$^{1}$
+\name{ P. Rajan$^{1}$ P. Burlina$^{1,2}$ M. Chen$^{2}$ B. Jedynak$^{3}$  C. Krupiarz$^{2}$ N. Mehta$^{2}$ A. Sinha$^{1}$ G. Hager$^{1}$
 \thanks{This work was supported by an Early Stage Innovations grant from NASA?s Space Technology Research Grants
 Program NNX14AB04G.}}
 \address{The Johns Hopkins University  \\   $^{1}$Dept. of Computer Science, $^{2}$Applied Physics Laboratory, $^{3}$ Dept. of Applied Mathematics and Statistics}
@@ -67,7 +67,7 @@ Our focus here is therefore on developing an algorithm that can be hosted on-boa
 
 Prior image analysis work for asteroid detection for ground-based image observations is summarized: In~\cite{denneau2013pan}, a reference processing system for detection and identification of asteroids -- named the Pan-STARRS Moving Object Processing System (MOPS) --  is described. This pipeline aims at identifying moving objects in our solar system and linking those detections within and between night observations. It attributes those detections to known objects, calculates initial and differentially corrected orbits for linked detections, recovering detections when they exist, and orbit identification. Most proposed pipelines for earth based detection include a step to combine images to create a high S/N static-sky image that is subtracted from the current master image to obtain a difference image containing only transient sources. Examples include \cite{shao2014finding}, where a shift-and-add technique is used to improve  signal to noise ratio and then synthetically creating long exposure images to facilitate the detection of trajectories. A related shift-and-add method using a median  image rather than an average image is reported in~\cite{yanagisawa2005automatic}. A match filter is used for asteroid detection and matching in \cite{gural2005matched}. In \cite{kubica2005variable,kubica2005multiple,kubica2007efficient}, tree based searches (including KD-trees) are used for efficient linking of successive asteroids detections and finding sets of observation points that can be fitted with an inherent motion model, through an exhaustive search for all possible linkages that satisfy the expected model constraints.
 	
-In Section~\ref{sec:approach} we describe a small-footprint pipeline (with regard to memory and CPU usage) that can be deployed on an on-board system. This approach uses Principal Component Analysis based searches to link object detections into trajectories. Since space-based asteroids surveys such as NEOWISE are still rare, we describe in Section~\ref{sec:experiments} a validation method using space-based simulated images as well as earth-based image datasets that contain associated ground truth.
+In Section~\ref{sec:approach} we describe a small-footprint pipeline (with regard to memory and CPU usage) that can be deployed on an on-board system. This approach uses Principal Component Analysis based searches to link object detections into trajectories. Since space-based asteroids surveys such as NEOWISE are still rare, we describe in Section~\ref{sec:experiments} a validation method using space-based simulated images as well as appropriate earth-based image datasets that contain associated ground truth.
 
 \section{Approach}
 \label{sec:approach}

@@ -20,36 +20,6 @@ We detail the experiments performed using a range of simulated space-based image
 
 %We  detail experiments using a JHU APL developed Renderer and Camera Emulator (RCE) to simulate a range of imagery and real imagery from the NEAT dataset.  
 
-\subsection{Simulated Imagery}
-\label{ssec:simulated}
-
-Using RCE, asteroids are  modeled as spherical blackbody-like emitters (emissivity is less than 1), with a cross-sectional area that approximates the sizes of actual asteroids and surface temperatures typical of sun-illuminated asteroids in an Earth-like orbit.  Similar to the way stars are modeled, the radiation emitted is modeled using a form of Planck's equation:
-
-\vspace{-0.3cm}
-\begin{equation}
-\label{eq:Planck}
-B_\lambda(T)= \epsilon	\frac{2hc^2}{\lambda^5} \frac{1}{e^{\frac{hc}{\lambda k_BT}} - 1}
-\end{equation}
-%\vspace{-0.04cm}
- where $B_\lambda(T)$ is the spectral radiance at a given wavelength $\lambda$ and temperature $T$ (which in SI units would be $Wm^{-2} m^{-1}$). The value $\epsilon$ is the emissivity of the asteroid, which essentially converts the blackbody spectral radiance into spectral irradiance. The constant, $h$ is the Planck's constant, $c$ is the speed of light, $\lambda$ is wavelength, $k_B$ is the Boltzmann constant, and $T$ is the temperature. 
- 
- The asteroids are assumed to have a nominal temperature of 200 K due to solar heating and emissivities in the range from 0.9 to 0.98. 
- %Therefore, their spectral radiance would look like what is shown in Figure \ref{}(TODO: Add this figure? The plot in the year end report does not have the axes labeled.).  For this 200 K blackbody, the peak in the radiance occurs at a wavelength of 14.5 µm.
- The RCE uses stellar data available as part of the Two Micron All Sky Survey (2MASS), a stellar survey that scanned the entire sky in three IR bands (centered at 1.25 µm, 1.65 µm, and 2.17 µm, respectively).  The 2MASS catalog also incorporates data in two visible bands from other surveys. 
- %
- An example of the simulated MWIR image and the ground truth trajectory derived from one set of simulated imagery is shown in Fig. \ref{Simulated_Image}. 
- %In this figure, the simulated images are super-imposed in order to visualize the asteroid trajectory in a single image. 
- %
- Fig. \ref{Trajectories_Sim} shows the final trajectories detected by our algorithm for one triplet and one quadruplet of the simulated MWIR dataset. As is shown in Fig. \ref{Trajectories_Sim}, using trajectory verification on a greater number of images in the sequence allows us to quickly disambiguate and reject false trajectories. In this case this trend is readily apparent when going from a triplet to a quadruplet of images.
-%
-
-We characterize the algorithm with regard to detections at each of the following three successive stages: the initial detection of objects, the detection of moving objects and the detection of trajectories.
-In Fig.~\ref{num_detect}, we plot the number of detected objects at each step of the pipeline for each selected threshold value. We can verify that the number of detections monotonically decreases when the threshold increases. Note that we have found that this not always the case, especially since a higher number of detections at the thresholding stage may induce more cancelations at the logical differencing. Additionally, we note in the right plot in Fig.~\ref{num_detect} that the use of quadruplets allows for a single trajectory to be found irrespective of the value of the threshold used (and hence the number of detections found at the first stage), echoing the results displayed in Fig.~\ref{Trajectories_Sim}.
-%
-Last, we show the Receiver Operating Characteristic (ROC) for simulated space-based imagery in Fig.~\ref{fig:ROC}.  
-%
-%Results for each step of the pipeline are shown:
-% Image Registration in Figure~\ref{}. Logical differencing in Figure~\ref{}. (See Figure ~\ref{} for trajectory detection on an example image triplet).    As is shown in Figure~\ref{}, using trajectory verification on a greater number of images in the sequence allows us to quickly disambiguate and reject false trajectories (in this case this trend is readily apparent when going from a triplet to a quadruplet of images).
 %
 \begin{figure}[t]
 \vspace{-0.3cm}
@@ -105,8 +75,39 @@ Last, we show the Receiver Operating Characteristic (ROC) for simulated space-ba
 \vspace{-0.5cm}
 \subsection{Real Imagery}
 
+\subsection{Simulated Space-Based Imagery}
+\label{ssec:simulated}
+
+Using RCE, asteroids are  modeled as spherical blackbody-like emitters (emissivity is less than 1), with a cross-sectional area that approximates the sizes of actual asteroids and surface temperatures typical of sun-illuminated asteroids in an Earth-like orbit.  Similar to the way stars are modeled, the radiation emitted is modeled using a form of Planck's equation:
+
+\vspace{-0.3cm}
+\begin{equation}
+\label{eq:Planck}
+B_\lambda(T)= \epsilon	\frac{2hc^2}{\lambda^5} \frac{1}{e^{\frac{hc}{\lambda k_BT}} - 1}
+\end{equation}
+%\vspace{-0.04cm}
+ where $B_\lambda(T)$ is the spectral radiance at a given wavelength $\lambda$ and temperature $T$ (which in SI units would be $Wm^{-2} m^{-1}$). The value $\epsilon$ is the emissivity of the asteroid, which essentially converts the blackbody spectral radiance into spectral irradiance. The constant, $h$ is the Planck's constant, $c$ is the speed of light, $\lambda$ is wavelength, $k_B$ is the Boltzmann constant, and $T$ is the temperature. 
+ 
+ The asteroids are assumed to have a nominal temperature of 200 K due to solar heating and emissivities in the range from 0.9 to 0.98. 
+ %Therefore, their spectral radiance would look like what is shown in Figure \ref{}(TODO: Add this figure? The plot in the year end report does not have the axes labeled.).  For this 200 K blackbody, the peak in the radiance occurs at a wavelength of 14.5 µm.
+ The RCE uses stellar data available as part of the Two Micron All Sky Survey (2MASS), a stellar survey that scanned the entire sky in three IR bands (centered at 1.25 µm, 1.65 µm, and 2.17 µm, respectively).  The 2MASS catalog also incorporates data in two visible bands from other surveys. 
+ %
+ An example of the simulated MWIR image and the ground truth trajectory derived from one set of simulated imagery is shown in Fig. \ref{Simulated_Image}. 
+ %In this figure, the simulated images are super-imposed in order to visualize the asteroid trajectory in a single image. 
+ %
+ Fig. \ref{Trajectories_Sim} shows the final trajectories detected by our algorithm for one triplet and one quadruplet of the simulated MWIR dataset. As is shown in Fig. \ref{Trajectories_Sim}, using trajectory verification on a greater number of images in the sequence allows us to quickly disambiguate and reject false trajectories. In this case this trend is readily apparent when going from a triplet to a quadruplet of images.
+%
+
+We characterize the algorithm with regard to detections at each of the following three successive stages: the initial detection of objects, the detection of moving objects and the detection of trajectories.
+In Fig.~\ref{num_detect}, we plot the number of detected objects at each step of the pipeline for each selected threshold value. We can verify that the number of detections monotonically decreases when the threshold increases. Note that we have found that this not always the case, especially since a higher number of detections at the thresholding stage may induce more cancelations at the logical differencing. Additionally, we note in the right plot in Fig.~\ref{num_detect} that the use of quadruplets allows for a single trajectory to be found irrespective of the value of the threshold used (and hence the number of detections found at the first stage), echoing the results displayed in Fig.~\ref{Trajectories_Sim}.
+%
+Last, we show the Receiver Operating Characteristic (ROC) for simulated space-based imagery in Fig.~\ref{fig:ROC}.  
+%
+%Results for each step of the pipeline are shown:
+% Image Registration in Figure~\ref{}. Logical differencing in Figure~\ref{}. (See Figure ~\ref{} for trajectory detection on an example image triplet).    As is shown in Figure~\ref{}, using trajectory verification on a greater number of images in the sequence allows us to quickly disambiguate and reject false trajectories (in this case this trend is readily apparent when going from a triplet to a quadruplet of images).
+
 \subsubsection{NEAT}
-Near Earth Asteroid Tracking(NEAT)~\cite{neat2014} was an earth-based program run by NASA from 1995-2007 to discover NEOs.
+Near Earth Asteroid Tracking(NEAT)~\cite{neat2014} is an earth-based program run by NASA from 1995-2007 to discover NEOs.
 Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the results at all stages of the pipeline for one triplet of images of the 2002-CY46 asteroid obtained from the NEAT system archive. 
 %The following figures show the results at all stages of the pipeline for one triplet of images of the 2002-CY46 asteroid obtained from the NEAT \cite{neat2014} survey. 
  
@@ -123,7 +124,7 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 %\caption{2002 CY46 Triplet Near Earth Asteroid Tracking (NEAT) system archive}
 %\label{fig:NEAT_Images}
 %\end{figure*}
-\vspace{-0.5cm}
+\vspace{-0.2cm}
 \newcommand{\imgWidth}{0.15\textwidth}
 \begin{figure}[h]
 \begin{center}$
@@ -167,30 +168,42 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 \vspace{-0.3cm}
 \end{figure}
 
-\begin{figure}[t]
-\vspace{-0.7cm}
-\begin{center}$
-\begin{array}{@{\hspace{0.2em}}c@{\hspace{0.3em}}c@{\hspace{0.3em}}c}
-\includegraphics[width=\imgWidth]{Figures/CSS_100_5000_1.pdf} &
-\includegraphics[width=\imgWidth]{Figures/CSS_100_5000_2.pdf} &
-\includegraphics[width=\imgWidth]{Figures/CSS_100_5000_3.pdf} \\
-\includegraphics[width=\imgWidth]{Figures/ImageReg12_CSS.pdf} &
-\includegraphics[width=\imgWidth]{Figures/CSS_100_5000_2.pdf} &
-\includegraphics[width=\imgWidth]{Figures/ImageReg32_CSS.pdf} \\
-\includegraphics[width=\imgWidth]{Figures/ImageDiff_CSS1.pdf} &
-\includegraphics[width=\imgWidth]{Figures/ImageDiff_CSS2.pdf} &
-\includegraphics[width=\imgWidth]{Figures/ImageDiff_CSS3.pdf} 
-\end{array}$
+\begin{figure}[h]
+\vspace{-0.2cm}
+\begin{center}
+\includegraphics[width=0.3\textwidth]{Figures/ImageDiff_CSS3.pdf} 
 \end{center}
 \vspace{-0.7cm}
-\caption[caption]{Image Processing Pipeline results shown on Catalina Sky Survey data. 
-(row 1):  input image triplet taken approx. 10 minutes apart. 
-(row 2): Image Registration. Left: Image-1 registered to Image-2. Right: Image-3 registered to Image-2. 
-%\\\hspace{\textwidth} 
-(row 3): Image Differencing results }
+\caption[caption]{Image Processing  results shown on Catalina Sky Survey data.}
 %\\\hspace{\textwidth} 
 \label{IPP_Catalina_Layout1}
 \end{figure}
+
+%
+%\begin{figure}[t]
+%\vspace{-0.7cm}
+%\begin{center}$
+%\begin{array}{@{\hspace{0.2em}}c@{\hspace{0.3em}}c@{\hspace{0.3em}}c}
+%\includegraphics[width=\imgWidth]{Figures/CSS_100_5000_1.pdf} &
+%\includegraphics[width=\imgWidth]{Figures/CSS_100_5000_2.pdf} &
+%\includegraphics[width=\imgWidth]{Figures/CSS_100_5000_3.pdf} \\
+%\includegraphics[width=\imgWidth]{Figures/ImageReg12_CSS.pdf} &
+%\includegraphics[width=\imgWidth]{Figures/CSS_100_5000_2.pdf} &
+%\includegraphics[width=\imgWidth]{Figures/ImageReg32_CSS.pdf} \\
+%\includegraphics[width=\imgWidth]{Figures/ImageDiff_CSS1.pdf} &
+%\includegraphics[width=\imgWidth]{Figures/ImageDiff_CSS2.pdf} &
+%\includegraphics[width=\imgWidth]{Figures/ImageDiff_CSS3.pdf} 
+%\end{array}$
+%\end{center}
+%\vspace{-0.7cm}
+%\caption[caption]{Image Processing Pipeline results shown on Catalina Sky Survey data. 
+%(row 1):  input image triplet taken approx. 10 minutes apart. 
+%(row 2): Image Registration. Left: Image-1 registered to Image-2. Right: Image-3 registered to Image-2. 
+%%\\\hspace{\textwidth} 
+%(row 3): Image Differencing results }
+%%\\\hspace{\textwidth} 
+%\label{IPP_Catalina_Layout1}
+%\end{figure}
 
 
 
@@ -303,8 +316,10 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 
 
 \subsubsection{CATALINA}
-The Catalina Sky Survey (CSS) \cite{css2014} is intended to discover NEOs, specifically potentially hazardous asteroids that pose risk to earth. Fig. \ref{IPP_Catalina_Layout1} and Fig. \ref{fig:IPP_CSS_Trajectory} show the results at all stages of the pipeline for one triplet of earth-based images from CSS.
-\vspace{-0.6cm}
+The Catalina Sky Survey (CSS) \cite{larson1998catalina,drake2009first} is intended to discover NEOs, specifically potentially hazardous asteroids that pose risk to earth. Fig. \ref{IPP_Catalina_Layout1} 
+%and Fig. \ref{fig:IPP_CSS_Trajectory} 
+show the results at all stages of the pipeline for one triplet of earth-based images from CSS.
+\vspace{-0.3cm}
 \subsection{Implementation}
-This pipeline is currently being developed and tested in Matlab  and is also jointly implemented in C++ on a recent Intel processor. Preliminary benchmarking on this processor have shown that peak memory usage is of the order 92 Mb. Additional studies for extrapolating CPU usage and processing time figures for a proxy spacecraft target deployment processor such as the MCP750 have led to metrics that seem promising and compatible with deployment on a spacecraft architecture. More work is currently being conducted to validate this including activities involving the deployment of this algorithm onto a native MCP750 architecture using FPGAs. 
+This pipeline has been developed and tested in Matlab  and has also been jointly implemented in C++ on a recent Intel processor. Preliminary benchmarking on this processor have shown that peak memory usage is of the order 92 Mb. Additional studies for extrapolating CPU usage and processing time figures for a proxy spacecraft target deployment processor such as the MCP750 have led to metrics that seem promising and compatible with deployment on a spacecraft architecture. More work is currently being conducted to validate these figures including activities involving the deployment of this algorithm onto a native MCP750 architecture using FPGAs. 
 

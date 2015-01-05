@@ -71,4 +71,20 @@ Paul Viola and William~M Wells~III,
 \newblock {\em International journal of computer vision}, vol. 24, no. 2, pp.
   137--154, 1997.
 
+\bibitem{css2014}
+NASA,
+\newblock ``{The Catalina Sky Survey},'' 2014.
+
+\bibitem{larson1998catalina}
+S~Larson, J~Brownlee, C~Hergenrother, and T~Spahr,
+\newblock ``The catalina sky survey for neos,''
+\newblock in {\em Bulletin of the American Astronomical Society}, 1998,
+  vol.~30, p. 1037.
+
+\bibitem{drake2009first}
+AJ~Drake, SG~Djorgovski, A~Mahabal, E~Beshore, S~Larson, MJ~Graham, R~Williams,
+  E~Christensen, M~Catelan, A~Boattini, et~al.,
+\newblock ``First results from the catalina real-time transient survey,''
+\newblock {\em The Astrophysical Journal}, vol. 696, no. 1, pp. 870, 2009.
+
 \end{thebibliography}

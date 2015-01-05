@@ -7,45 +7,47 @@ Warning--entry type for "wise2014" isn't style-file defined
 --line 94 of file asteroid.bib
 Warning--entry type for "neat2014" isn't style-file defined
 --line 102 of file asteroid.bib
-You've used 12 entries,
+Warning--entry type for "css2014" isn't style-file defined
+--line 120 of file asteroid.bib
+You've used 15 entries,
             1838 wiz_defined-function locations,
-            531 strings with 5871 characters,
-and the built_in function-call counts, 3107 in all, are:
-= -- 256
-> -- 196
-< -- 2
-+ -- 70
-- -- 58
-* -- 281
-:= -- 519
-add.period$ -- 13
-call.type$ -- 12
-change.case$ -- 12
+            546 strings with 6312 characters,
+and the built_in function-call counts, 3853 in all, are:
+= -- 308
+> -- 249
+< -- 4
++ -- 89
+- -- 74
+* -- 339
+:= -- 638
+add.period$ -- 16
+call.type$ -- 15
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 110
-empty$ -- 268
-format.name$ -- 58
-if$ -- 668
+cite$ -- 15
+duplicate$ -- 144
+empty$ -- 335
+format.name$ -- 74
+if$ -- 836
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 10
-newline$ -- 61
-num.names$ -- 12
-pop$ -- 31
+int.to.str$ -- 15
+missing$ -- 12
+newline$ -- 75
+num.names$ -- 15
+pop$ -- 45
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 42
+skip$ -- 63
 stack$ -- 0
-substring$ -- 197
-swap$ -- 29
-text.length$ -- 2
+substring$ -- 214
+swap$ -- 43
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 30
-width$ -- 14
-write$ -- 131
-(There were 2 warnings)
+while$ -- 35
+width$ -- 17
+write$ -- 163
+(There were 3 warnings)
