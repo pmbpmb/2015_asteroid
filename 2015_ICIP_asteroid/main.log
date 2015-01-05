@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  5 JAN 2015 12:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  5 JAN 2015 12:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -422,19 +422,19 @@ File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
 )) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 44.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -502,18 +502,18 @@ e
 ))
 ABD: EveryShipout initializing macros
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 46.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 47.
 
-Overfull \hbox (13.33392pt too wide) in paragraph at lines 46--46
+Overfull \hbox (13.33392pt too wide) in paragraph at lines 47--47
  [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 53.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 54.
 
-Underfull \hbox (badness 1112) in paragraph at lines 67--68
+Underfull \hbox (badness 1112) in paragraph at lines 68--69
 []\OT1/ptm/m/n/10 Prior im-age anal-y-sis work for as-ter-oid de-tec-tion for
  []
 
@@ -525,18 +525,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Overfull \hbox (5.64336pt too wide) in paragraph at lines 88--90
+Overfull \hbox (5.64336pt too wide) in paragraph at lines 89--91
 [][]
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 94--97
+Underfull \hbox (badness 1189) in paragraph at lines 95--98
 []\OT1/ptm/b/n/10 Image Pre-Processing \OT1/ptm/m/n/10 This step in-cludes em-p
 loy-ing
  []
 
 
-LaTeX Warning: Citation `css2014' on page 2 undefined on input line 106.
+LaTeX Warning: Citation `css2014' on page 2 undefined on input line 107.
 
 (./Experiments.tex [2]
 Missing character: There is no Â in font ptmr7t!
@@ -779,31 +779,27 @@ File: Figures/ImageDiff_CSS3.pdf Graphic file (type pdf)
 <use Figures/ImageDiff_CSS3.pdf>
 Package pdftex.def Info: Figures/ImageDiff_CSS3.pdf used on input line 182.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: Figures/NEAT1.pdf Graphic file (type pdf)
-<use Figures/NEAT1.pdf>
+ <use Figures/NEAT1.pdf>
 Package pdftex.def Info: Figures/NEAT1.pdf used on input line 215.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEATImageReg12.pdf Graphic file (type pdf)
- <use Figures/NEATImageReg12.pdf>
+
+<use Figures/NEATImageReg12.pdf>
 Package pdftex.def Info: Figures/NEATImageReg12.pdf used on input line 216.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEATImageDiff1.pdf Graphic file (type pdf)
-
-<use Figures/NEATImageDiff1.pdf>
+ <use Figures/NEATImageDiff1.pdf>
 Package pdftex.def Info: Figures/NEATImageDiff1.pdf used on input line 217.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEATFilteredCentroids1.pdf Graphic file (type pdf)
- <use Figures/NEATFilteredCentroids1.pdf>
+
+<use Figures/NEATFilteredCentroids1.pdf>
 Package pdftex.def Info: Figures/NEATFilteredCentroids1.pdf used on input line 
 218.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 File: Figures/NEAT2.pdf Graphic file (type pdf)
-
-<use Figures/NEAT2.pdf>
+ <use Figures/NEAT2.pdf>
 Package pdftex.def Info: Figures/NEAT2.pdf used on input line 219.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 
@@ -850,11 +846,8 @@ LaTeX Warning: Citation `css2014' on page 3 undefined on input line 306.
 LaTeX Warning: Reference `fig:IPP_CSS_Trajectory' on page 3 undefined on input 
 line 306.
 
-)
-Underfull \vbox (badness 2626) has occurred while \output is active []
-
- [3 <./Figures/Simulated_130_12.pdf> <./Figures/TrueTrajectory_130.pdf> <./Figu
-res/Lines_011_016_021.pdf> <./Figures/Lines_011_016_021_026.pdf>] (./main.bbl
+) [3 <./Figures/Simulated_130_12.pdf> <./Figures/TrueTrajectory_130.pdf> <./Fig
+ures/Lines_011_016_021.pdf> <./Figures/Lines_011_016_021_026.pdf>] (./main.bbl
 
 LaTeX Warning: Text page 4 contains only floats.
 
@@ -890,14 +883,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  13198 strings out of 493117
  271158 string characters out of 6135433
- 318681 words of memory out of 5000000
+ 317764 words of memory out of 5000000
  16378 multiletter control sequences out of 15000+600000
  20508 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -916,7 +906,7 @@ dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
 /type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on main.pdf (7 pages, 2303253 bytes).
+Output written on main.pdf (7 pages, 2303396 bytes).
 PDF statistics:
  205 PDF objects out of 1000 (max. 8388607)
  127 compressed objects within 2 object streams

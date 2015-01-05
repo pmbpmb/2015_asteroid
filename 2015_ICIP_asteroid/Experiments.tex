@@ -167,7 +167,7 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 \vspace{-0.3cm}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[t]
 \vspace{-0.7cm}
 \begin{center}$
 \begin{array}{@{\hspace{0.2em}}c@{\hspace{0.3em}}c@{\hspace{0.3em}}c}
@@ -306,9 +306,5 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 The Catalina Sky Survey (CSS) \cite{css2014} is intended to discover NEOs, specifically potentially hazardous asteroids that pose risk to earth. Fig. \ref{IPP_Catalina_Layout1} and Fig. \ref{fig:IPP_CSS_Trajectory} show the results at all stages of the pipeline for one triplet of earth-based images from CSS.
 \vspace{-0.6cm}
 \subsection{Implementation}
-We detail here information demonstrating  that this algorithm is compatible with deployment on a reference spacecraft platform such as the MCP750.
-%Efforts are currently being conducted to translate this algorithm from C++ to an FPGA board. 
-
-%
 This pipeline is currently being developed and tested in Matlab  and is also jointly implemented in C++ on a recent Intel processor. Preliminary benchmarking on this processor have shown that peak memory usage is of the order 92 Mb. Additional studies for extrapolating CPU usage and processing time figures for a proxy spacecraft target deployment processor such as the MCP750 have led to metrics that seem promising and compatible with deployment on a spacecraft architecture. More work is currently being conducted to validate this including activities involving the deployment of this algorithm onto a native MCP750 architecture using FPGAs. 
 
