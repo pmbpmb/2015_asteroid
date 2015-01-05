@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  5 JAN 2015 11:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  5 JAN 2015 12:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -850,8 +850,11 @@ LaTeX Warning: Citation `css2014' on page 3 undefined on input line 306.
 LaTeX Warning: Reference `fig:IPP_CSS_Trajectory' on page 3 undefined on input 
 line 306.
 
-[3 <./Figures/Simulated_130_12.pdf> <./Figures/TrueTrajectory_130.pdf> <./Figur
-es/Lines_011_016_021.pdf> <./Figures/Lines_011_016_021_026.pdf>]
+)
+Underfull \vbox (badness 2626) has occurred while \output is active []
+
+ [3 <./Figures/Simulated_130_12.pdf> <./Figures/TrueTrajectory_130.pdf> <./Figu
+res/Lines_011_016_021.pdf> <./Figures/Lines_011_016_021_026.pdf>] (./main.bbl
 
 LaTeX Warning: Text page 4 contains only floats.
 
@@ -863,37 +866,38 @@ res/NEATImageDiff1.pdf> <./Figures/NEATImageDiff2.pdf> <./Figures/NEATImageDiff
 3.pdf> <./Figures/NEATFilteredCentroids1.pdf> <./Figures/NEATFilteredCentroids2
 .pdf> <./Figures/NEATFilteredCentroids3.pdf> <./Figures/NEATLines_LogicalImg.pd
 f>]
-Overfull \hbox (31.68573pt too wide) detected at line 346
+Underfull \hbox (badness 1178) in paragraph at lines 36--41
+[]\OT1/ptm/m/n/10 Toshifumi Yanag-i-sawa, At-sushi Naka-jima, Ken-ichi
+ []
+
+) [5 <./Figures/CSS_100_5000_1.pdf> <./Figures/CSS_100_5000_2.pdf> <./Figures/C
+SS_100_5000_3.pdf> <./Figures/ImageReg12_CSS.pdf> <./Figures/ImageReg32_CSS.pdf
+> <./Figures/ImageDiff_CSS1.pdf> <./Figures/ImageDiff_CSS2.pdf> <./Figures/Imag
+eDiff_CSS3.pdf>] (./cpu.tex
+Overfull \hbox (31.68573pt too wide) detected at line 37
 \OML/cmm/m/it/10 ^^\[] \OT1/cmr/m/n/10 = [] = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/1
 0 414\OML/cmm/m/it/10 sec
  []
 
 
-LaTeX Warning: Reference `' on page 5 undefined on input line 364.
+LaTeX Warning: Reference `' on page 6 undefined on input line 55.
 
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-(./main.bbl
-Underfull \hbox (badness 1178) in paragraph at lines 36--41
-[]\OT1/ptm/m/n/10 Toshifumi Yanag-i-sawa, At-sushi Naka-jima, Ken-ichi
- []
-
-[5 <./Figures/CSS_100_5000_1.pdf> <./Figures/CSS_100_5000_2.pdf> <./Figures/CSS
-_100_5000_3.pdf> <./Figures/ImageReg12_CSS.pdf> <./Figures/ImageReg32_CSS.pdf> 
-<./Figures/ImageDiff_CSS1.pdf> <./Figures/ImageDiff_CSS2.pdf> <./Figures/ImageD
-iff_CSS3.pdf>]) [6
-
-] [7 <./Figures/NEATImageReg22.pdf>] (./main.aux)
+[6] [7 <./Figures/NEATImageReg22.pdf>] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 13195 strings out of 493117
- 271139 string characters out of 6135433
- 317681 words of memory out of 5000000
+ 13198 strings out of 493117
+ 271158 string characters out of 6135433
+ 318681 words of memory out of 5000000
  16378 multiletter control sequences out of 15000+600000
  20508 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -912,7 +916,7 @@ dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
 /type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on main.pdf (7 pages, 2302258 bytes).
+Output written on main.pdf (7 pages, 2303253 bytes).
 PDF statistics:
  205 PDF objects out of 1000 (max. 8388607)
  127 compressed objects within 2 object streams
