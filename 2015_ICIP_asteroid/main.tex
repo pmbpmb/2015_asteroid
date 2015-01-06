@@ -80,42 +80,58 @@ Notable prior work includes~\cite{denneau2013pan}, describing a reference proces
 \section{Approach}
 \label{sec:approach}
 
-We describe the main components of our image processing pipeline (shown also in the flow chart in figure \ref{IPP}) addressing detection and linking of asteroids seen in images acquired from space-based platforms.  The pipeline is summarized as follows: as input to the pipeline is a sequence of time-lapse images. Pre-processing and image registration are used to bring the images into alignment with a common image of reference.  Detection of bright bodies is done via thresholding, followed by logical differencing between each image and a reference image containing objects that are common to all registered images in the image sequence.  After differencing, which allows us to detect moving objects, we use an additional step to filter detections based on size and shape considerations (using connected components and morphological filters).  A list of detection coordinates is generated.  Candidate trajectories are then generated from these coordinates by efficiently checking rectilinearity by using both Principal Component Analysis (PCA) and 2d-trees.  A last verification step further checks additional conditions such as the fact that candidate trajectories must be composed of temporally consecutive mover observations.  Component module are detailed next. 
+We describe the main components of our image processing pipeline addressing detection and linking of asteroids seen in images acquired from space-based platforms. The reader is also referred to the 
+%flow chart in Fig~\ref{IPP} and 
+detailed pseudocode~\ref{code}.  The approach is as follows, taking as input a sequence of time-lapse images:
 
-\tikzstyle{block} = [rectangle, minimum width=1.8cm, minimum height=1.5cm, text centered, text width=1.8cm, draw=black, fill=blue!15]
-\tikzstyle{arrow} = [thick,->,>=stealth]
-\begin{figure}[b]
-\begin{tikzpicture}[node distance=2.25cm]
-\node (proc) [block] {Image Pre-Processing};
-\node (reg) [block, right of=proc] {Image Registration};
-\node (diff) [block, right of=reg] {Logical Differencing};
-%\node (det) [block, right of=diff, yshift=1.2cm] {Trajectory Detection};
-\node (det) [block, right of=diff] {Trajectory Linking};
-\draw [arrow] (proc) -- (reg);
-\draw [arrow] (reg) -- (diff);
-\draw [arrow] (diff) -- (det);
-\end{tikzpicture}
-\vspace{-0.7cm}
-\caption{Image Processing Pipeline}
-\label{IPP}
-\end{figure}
-
-{\bf Image Pre-Processing}
-%We standardize the input images by using a series of photometric and geometric transformations.  
-This step includes employing techniques to reduce noise (e.g. median filter) and artifacts that depend on the acquisition device.   %This coordinate information can then be stored in the FITS (Flexible Image Transport System) image header for later use in the Trajectory Verification stage.
-
+\noindent
+{\bf Image Pre-Processing} Median filtering is applied  to reduce impulsive noise and artifacts that depend on the acquisition.\\
 {\bf Image Registration}
-%Image registration aims at finding the transformation that would align multiple images of the same scene that are obtained at different times from slightly different viewpoints.  
-We aim to align each image in the sequence to a common reference image so that the stars in the background line up in all images.  In the case of a triplet of images, the second image is used as the reference image.  We estimate and then apply the necessary similarity transformation (translation, rotation, scaling) and/or skew (for a full affine transformation) to all images in the sequence such that image objects (stars) are mapped into the same pixel location and so that all transformed images have the same spatial resolution.  Image Registration using mutual information~\cite{viola1997alignment} and cross-correlation as similarity measures are used. 
+Image registration is used to bring the images into alignment with a common image of reference so that the stars in the background line up in all images.  In the case of a triplet of images, the second image is used as the reference image.  We use a similarity transformation (translation, rotation, scaling) and/or skew (for a full affine transformation) to align all images in the sequence such that image objects (stars) are mapped into the same pixel location and all transformed images have the same spatial resolution.  Image Registration using mutual information~\cite{viola1997alignment} is used to estimate the transformation parameters.
 
 {\bf Image Logical Differencing}
 A global thresholding is applied to the registered image for detecting asteroids and suppressing background noise.  As asteroids are typically very faint compared to the surrounding stars, the selection of the detection threshold impacts false alarm rate.  Thresholding yields binary detection images.  The set of all binary images is then used to generate an intersection image that contains objects that occur in all images in the sequence.  This is followed by logical differencing whereby we produce a set of difference images by intersecting the corresponding binary image with the negative of the common intersection image.  This operation provides a list of candidate detections for each image in the sequence.  While the logical differencing results in good detections, additional artifacts such as crater-like formations (see Fig.~\ref{IPP_NEAT_Layout1}) are seen as a result of some of the celestial bodies being over-exposed.  To mitigate this artifact, we subsequently perform filtering out of hollow objects as well as filtering based on object size.
 
 {\bf Trajectory Linking}
 The list of centroids of moving objects obtained from image differencing defines a set of candidate rectilinear trajectories.  The goal is to find a subset of centroids that fit a linear model. Even though the model is simple, the set of filtered centroids potentially has a high number of noisy points (falsely detected movers), and the cardinality of the set of all candidate trajectories increases exponentially with the number of detections, thus requiring subsequent pruning of this set. We use a combination of PCA and 2d-trees in order to find the trajectories efficiently. Unlike MOPS~\cite{denneau2013pan} and CSS\cite{css2014}, we do not set an upper limit on the velocity of the asteroid, and hence do not risk missing potential fast moving targets. Given a sequence of images, we form all the possible trajectories connecting the detections in the first and last frames. There are $O(n^2)$ trajectories, where $n$ is the number of detections per image. We then find the point of intersection of each of these trajectories with the frames in the middle. We construct a 2 dimensional tree for all the frames in the middle, and perform a range search on the tree to generate the detections that lie within a small radius of the point of intersection. This query can be done on $O(log(n))$ time on average. Once we find a collection of such points that potentially form a linear trajectory, we perform PCA and compute the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$ in order to develop a line confidence score for each candidate trajectory, and choose lines for which this ratio exceeds a threshold. Using the candidate trajectories thus found, we then enforce temporal order of detection by using the sign of the projection on the principal eigenvector.  As the final step, we further eliminate false positives by ensuring that the distance between projections is proportional to the time interval between images. Compared to a brute force line search of $O(n^3)$ for a triplet of images, our algorithm takes $O(n^2log(n))$ time.
+
+
+%\tikzstyle{block} = [rectangle, minimum width=1.8cm, minimum height=1.5cm, text centered, text width=1.8cm, draw=black, fill=blue!15]
+%\tikzstyle{arrow} = [thick,->,>=stealth]
+%\begin{figure}[b]
+%\begin{tikzpicture}[node distance=2.25cm]
+%\node (proc) [block] {Image Pre-Processing};
+%\node (reg) [block, right of=proc] {Image Registration};
+%\node (diff) [block, right of=reg] {Logical Differencing};
+%%\node (det) [block, right of=diff, yshift=1.2cm] {Trajectory Detection};
+%\node (det) [block, right of=diff] {Trajectory Linking};
+%\draw [arrow] (proc) -- (reg);
+%\draw [arrow] (reg) -- (diff);
+%\draw [arrow] (diff) -- (det);
+%\end{tikzpicture}
+%\vspace{-0.7cm}
+%\caption{Image Processing Pipeline}
+%\label{IPP}
+%\end{figure}
+
+%The pipeline is summarized as follows: as input to the pipeline is a sequence of time-lapse images. Pre-processing and image registration are used to bring the images into alignment with a common image of reference.  Detection of bright bodies is done via thresholding, followed by logical differencing between each image and a reference image containing objects that are common to all registered images in the image sequence.  After differencing, which allows us to detect moving objects, we use an additional step to filter detections based on size and shape considerations (using connected components and morphological filters).  A list of detection coordinates is generated.  Candidate trajectories are then generated from these coordinates by efficiently checking rectilinearity by using both Principal Component Analysis (PCA) and 2d-trees.  A last verification step further checks additional conditions such as the fact that candidate trajectories must be composed of temporally consecutive mover observations.  Component module are detailed next. 
+%
+%
+%{\bf Image Pre-Processing}
+%%We standardize the input images by using a series of photometric and geometric transformations.  
+%This step includes employing techniques to reduce noise (e.g. median filter) and artifacts that depend on the acquisition device.   %This coordinate information can then be stored in the FITS (Flexible Image Transport System) image header for later use in the Trajectory Verification stage.
+%
+%{\bf Image Registration}
+%%Image registration aims at finding the transformation that would align multiple images of the same scene that are obtained at different times from slightly different viewpoints.  
+%We aim to align each image in the sequence to a common reference image so that the stars in the background line up in all images.  In the case of a triplet of images, the second image is used as the reference image.  We estimate and then apply the necessary similarity transformation (translation, rotation, scaling) and/or skew (for a full affine transformation) to all images in the sequence such that image objects (stars) are mapped into the same pixel location and so that all transformed images have the same spatial resolution.  Image Registration using mutual information~\cite{viola1997alignment} and cross-correlation as similarity measures are used. 
+%
+%{\bf Image Logical Differencing}
+%A global thresholding is applied to the registered image for detecting asteroids and suppressing background noise.  As asteroids are typically very faint compared to the surrounding stars, the selection of the detection threshold impacts false alarm rate.  Thresholding yields binary detection images.  The set of all binary images is then used to generate an intersection image that contains objects that occur in all images in the sequence.  This is followed by logical differencing whereby we produce a set of difference images by intersecting the corresponding binary image with the negative of the common intersection image.  This operation provides a list of candidate detections for each image in the sequence.  While the logical differencing results in good detections, additional artifacts such as crater-like formations (see Fig.~\ref{IPP_NEAT_Layout1}) are seen as a result of some of the celestial bodies being over-exposed.  To mitigate this artifact, we subsequently perform filtering out of hollow objects as well as filtering based on object size.
+%
+%{\bf Trajectory Linking}
+%The list of centroids of moving objects obtained from image differencing defines a set of candidate rectilinear trajectories.  The goal is to find a subset of centroids that fit a linear model. Even though the model is simple, the set of filtered centroids potentially has a high number of noisy points (falsely detected movers), and the cardinality of the set of all candidate trajectories increases exponentially with the number of detections, thus requiring subsequent pruning of this set. We use a combination of PCA and 2d-trees in order to find the trajectories efficiently. Unlike MOPS~\cite{denneau2013pan} and CSS\cite{css2014}, we do not set an upper limit on the velocity of the asteroid, and hence do not risk missing potential fast moving targets. Given a sequence of images, we form all the possible trajectories connecting the detections in the first and last frames. There are $O(n^2)$ trajectories, where $n$ is the number of detections per image. We then find the point of intersection of each of these trajectories with the frames in the middle. We construct a 2 dimensional tree for all the frames in the middle, and perform a range search on the tree to generate the detections that lie within a small radius of the point of intersection. This query can be done on $O(log(n))$ time on average. Once we find a collection of such points that potentially form a linear trajectory, we perform PCA and compute the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$ in order to develop a line confidence score for each candidate trajectory, and choose lines for which this ratio exceeds a threshold. Using the candidate trajectories thus found, we then enforce temporal order of detection by using the sign of the projection on the principal eigenvector.  As the final step, we further eliminate false positives by ensuring that the distance between projections is proportional to the time interval between images. Compared to a brute force line search of $O(n^3)$ for a triplet of images, our algorithm takes $O(n^2log(n))$ time.
 %Compared to a brute force line search ($O(n^k)$, where $k$ is the number of images in the sequence) our algorithm takes $O(n^2log(n))$ time.
 
-The Trajectory linking algorithm is provided below.
 \vspace{-0.1cm}
 \alglanguage{pseudocode}
 \begin{algorithm}[H]
@@ -123,17 +139,20 @@ The Trajectory linking algorithm is provided below.
 \caption{Detection and Linking Algorithm for a sequence of images}
 \label{algo:Trajectory_Linking}
 \begin{algorithmic}[1]
-\State Pre-Process all images in the sequence.
-\State Align all the images to the central image using Mutual Information based registration.
-\State Perform logical differencing on the  binary images generated from the registered images using a pre-defined threhold. Subsequently filtering out hollow objects gives a set of candidate detections on each image. 
-\State Form the set of all trajectories connecting the candidate detections from the first and last frame.
-\State Construct 2d-trees for the difference images corresponding to the frames in the middle, excluding the first and last frames. Each node of the tree stores the bounding box of all its children. (Phil: This line can be removed?)
+\State Median filter all images in the sequence.
+\State Align all the images to a reference frame (e.g. the second image for a triplet) using Mutual Information based registration.
+\State Perform thresholding on the registered images using a pre-defined threshold to generate  binary detection images. 
+\State Form the logical intersection image from all the binary detection images, then perform logical differencing between each detection image and the negative of the intersection image.
+\State Subsequently filter out hollow objects to produce a set of candidate moving objects on each image.  
+\State Form the set of all trajectories connecting the candidate moving object detections from the first and last frame.
+\State Construct 2d-trees for the difference images corresponding to the frames in the middle, excluding the first and last frames. Each node of the tree stores the bounding box of all its children. 
 \ForAll{trajectories connecting the first and last frames}	
 \State Find the points of intersection of each trajectory with the middle frames.
 \State Perform range search on the 2d-trees to find a list of detections near this point of intersection within each difference image. 
-\State Perform PCA on this subset of trajectories connecting points from all frames in the sequence.(Phil: If we miss one detection, we miss the entire line. Is it a bad idea to explicitly say this?) Find the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$. Reject trajectories for which this ratio exceeds a line confidence threshold. Ensure that the distance between projections is proportional to the time interval between images. (Phil: This is repeated from "Trajectory Linking" above)
+\State Perform PCA on this subset of trajectories connecting points from all frames in the sequence. Find the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$. Reject trajectories for which this ratio exceeds a line confidence threshold. Ensure that the distance between projections is proportional to the time interval between images. 
 \EndFor
 \end{algorithmic}
+\label{code}
 \end{algorithm}
 \vspace{-0.3cm}
 \vspace{-0.3cm}
