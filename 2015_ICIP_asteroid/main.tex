@@ -123,12 +123,15 @@ The Trajectory linking algorithm is provided below.
 \caption{Detection and Linking Algorithm for a sequence of images}
 \label{algo:Trajectory_Linking}
 \begin{algorithmic}[1]
-\State Form the set of all trajectories connecting the detections from the first and last frame.
-\State Construct the 2d-tree for the difference image corresponding to  image-2. (TODO: Mention bounding box.) 
+\State Pre-Process all images in the sequence.
+\State Align all the images to the central image using Mutual Information based registration.
+\State Perform logical differencing on the  binary images generated from the registered images using a pre-defined threhold. Subsequently filtering out hollow objects gives a set of candidate detections on each image. 
+\State Form the set of all trajectories connecting the candidate detections from the first and last frame.
+\State Construct 2d-trees for the difference images corresponding to the frames in the middle, excluding the first and last frames. Each node of the tree stores the bounding box of all its children.
 \ForAll{trajectories connecting the first and last frames}	
-\State Find the point of intersection of each trajectory with the middle frame.
-\State Perform range search on the 2d-tree for image-2 to find a list of points within a small radius around this point of intersection.
-\State Perform PCA on this subset of trajectories. Find the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$. Reject trajectories for which this ratio exceeds a threshold. (TODO: Clarify this step)
+\State Find the points of intersection of each trajectory with the middle frames.
+\State Perform range search on the 2d-trees to find a list of detections near this point of intersection within each difference image. 
+\State Perform PCA on this subset of trajectories. Find the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$. Reject trajectories for which this ratio exceeds a line confidence threshold. Ensure that the distance between projections is proportional to the time interval between images. (TODO: Repeated from "Trajectory Linking" above)
 \EndFor
 \end{algorithmic}
 \end{algorithm}
