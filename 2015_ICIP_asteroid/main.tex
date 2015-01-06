@@ -6,6 +6,9 @@
 \usepackage{spconf,amsmath,graphicx}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows}
+\usepackage{algorithmicx}
+\usepackage[ruled]{algorithm}
+\usepackage{algpseudocode}
 % Example definitions.
 % --------------------
 \def\x{{\mathbf x}}
@@ -112,6 +115,24 @@ A global thresholding is applied to the registered image for detecting asteroids
 The list of centroids of moving objects obtained from image differencing defines a set of candidate rectilinear trajectories.  The goal is to find a subset of centroids that fit a linear model. Even though the model is simple, the set of filtered centroids potentially has a high number of noisy points (falsely detected movers), and the cardinality of the set of all candidate trajectories increases exponentially with the number of detections, thus requiring subsequent pruning of this set. We use a combination of PCA and 2d-trees in order to find the trajectories efficiently. Unlike MOPS~\cite{denneau2013pan} and CSS\cite{css2014}, we do not set an upper limit on the velocity of the asteroid, and hence do not risk missing potential fast moving targets. Given a sequence of images, we form all the possible trajectories connecting the detections in the first and last frames. There are $O(n^2)$ trajectories, where $n$ is the number of detections per image. We then find the point of intersection of each of these trajectories with the frames in the middle. We construct a 2 dimensional tree for all the frames in the middle, and perform a range search on the tree to generate the detections that lie within a small radius of the point of intersection. This query can be done on $O(log(n))$ time on average. Once we find a collection of such points that potentially form a linear trajectory, we perform PCA and compute the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$ in order to develop a line confidence score for each candidate trajectory, and choose lines for which this ratio exceeds a threshold. Using the candidate trajectories thus found, we then enforce temporal order of detection by using the sign of the projection on the principal eigenvector.  As the final step, we further eliminate false positives by ensuring that the distance between projections is proportional to the time interval between images. Compared to a brute force line search of $O(n^3)$ for a triplet of images, our algorithm takes $O(n^2log(n))$ time.
 %Compared to a brute force line search ($O(n^k)$, where $k$ is the number of images in the sequence) our algorithm takes $O(n^2log(n))$ time.
 
+The Trajectory linking algorithm is provided below.
+\vspace{-0.1cm}
+\alglanguage{pseudocode}
+\begin{algorithm}[H]
+\small
+\caption{Trajectory Linking Algorithm for a triplet of images}
+\label{algo:Trajectory_Linking}
+\begin{algorithmic}[1]
+\State Form the set of all trajectories connecting the detections from the first and last frame.
+\State Construct the 2d-tree for the difference image corresponding to  image-2. (TODO: Mention bounding box.) 
+\ForAll{trajectories connecting the first and last frames}	
+\State Find the point of intersection of each trajectory with the middle frame.
+\State Perform range search on the 2d-tree for image-2 to find a list of points within a small radius around this point of intersection.
+\State Perform PCA on this subset of trajectories. Find the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$. Reject trajectories for which this ratio exceeds a threshold. (TODO: Clarify this step)
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+\vspace{-0.3cm}
 \vspace{-0.3cm}
 \input{Experiments}
 
