@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  6 JAN 2015 08:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  6 JAN 2015 11:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -419,39 +419,75 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
 \arrowsize=\dimen160
-)) (./main.aux)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count119
+\c@ALG@rem=\count120
+\c@ALG@nested=\count121
+\ALG@tlm=\skip46
+\ALG@thistlm=\skip47
+\c@ALG@Lnr=\count122
+\c@ALG@blocknr=\count123
+\c@ALG@storecount=\count124
+\c@ALG@tmpcounter=\count125
+\ALG@tmplength=\skip48
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count126
+\float@exts=\toks32
+\float@box=\box39
+\@float@everytoks=\toks33
+\@floatcapt=\box40
+)
+\@float@every@algorithm=\toks34
+\c@algorithm=\count127
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 44.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 47.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count119
+\scratchcounter=\count128
 \scratchdimen=\dimen161
-\scratchbox=\box39
-\nofMPsegments=\count120
-\nofMParguments=\count121
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count122
+\scratchbox=\box41
+\nofMPsegments=\count129
+\nofMParguments=\count130
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count131
 \MPscratchDim=\dimen162
-\MPnumerator=\count123
-\makeMPintoPDFobject=\count124
-\everyMPtoPDFconversion=\toks33
+\MPnumerator=\count132
+\makeMPintoPDFobject=\count133
+\everyMPtoPDFconversion=\toks36
 ) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -502,48 +538,54 @@ e
 ))
 ABD: EveryShipout initializing macros
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 47.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 54.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 57.
  [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
-Overfull \hbox (5.64336pt too wide) in paragraph at lines 94--96
+Overfull \hbox (5.64336pt too wide) in paragraph at lines 97--99
 [][]
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 100--103
+Underfull \hbox (badness 1189) in paragraph at lines 103--106
 []\OT1/ptm/b/n/10 Image Pre-Processing \OT1/ptm/m/n/10 This step in-cludes em-p
 loy-ing
  []
 
-(./Experiments.tex <Figures/Simulated_130_12.pdf, id=15, 433.62pt x 433.62pt>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
+(./Experiments.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+<Figures/Simulated_130_12.pdf, id=21, 433.62pt x 433.62pt>
 File: Figures/Simulated_130_12.pdf Graphic file (type pdf)
 
 <use Figures/Simulated_130_12.pdf>
 Package pdftex.def Info: Figures/Simulated_130_12.pdf used on input line 28.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 
-<Figures/TrueTrajectory_130.pdf, id=16, 433.62pt x 433.62pt>
+<Figures/TrueTrajectory_130.pdf, id=22, 433.62pt x 433.62pt>
 File: Figures/TrueTrajectory_130.pdf Graphic file (type pdf)
 
 <use Figures/TrueTrajectory_130.pdf>
 Package pdftex.def Info: Figures/TrueTrajectory_130.pdf used on input line 29.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 
-<Figures/Lines_011_016_021.pdf, id=17, 433.62pt x 433.62pt>
+<Figures/Lines_011_016_021.pdf, id=23, 433.62pt x 433.62pt>
 File: Figures/Lines_011_016_021.pdf Graphic file (type pdf)
 
 <use Figures/Lines_011_016_021.pdf>
 Package pdftex.def Info: Figures/Lines_011_016_021.pdf used on input line 41.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 
-<Figures/Lines_011_016_021_026.pdf, id=18, 433.62pt x 433.62pt>
+<Figures/Lines_011_016_021_026.pdf, id=24, 433.62pt x 433.62pt>
 File: Figures/Lines_011_016_021_026.pdf Graphic file (type pdf)
 
 <use Figures/Lines_011_016_021_026.pdf>
@@ -551,10 +593,7 @@ Package pdftex.def Info: Figures/Lines_011_016_021_026.pdf used on input line 4
 2.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Figures/Detections_Triplets_Color_f15.pdf, id=19, 433.62pt x 433.62pt>
+<Figures/Detections_Triplets_Color_f15.pdf, id=25, 433.62pt x 433.62pt>
 File: Figures/Detections_Triplets_Color_f15.pdf Graphic file (type pdf)
 
 <use Figures/Detections_Triplets_Color_f15.pdf>
@@ -562,7 +601,7 @@ Package pdftex.def Info: Figures/Detections_Triplets_Color_f15.pdf used on inpu
 t line 56.
 (pdftex.def)             Requested size: 126.61476pt x 126.61334pt.
 
-<Figures/Detections_Quad_Color_f15.pdf, id=20, 433.62pt x 433.62pt>
+<Figures/Detections_Quad_Color_f15.pdf, id=26, 433.62pt x 433.62pt>
 File: Figures/Detections_Quad_Color_f15.pdf Graphic file (type pdf)
 
 <use Figures/Detections_Quad_Color_f15.pdf>
@@ -577,7 +616,7 @@ Overfull \hbox (5.5358pt too wide) in paragraph at lines 54--59
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figures/ROC_StarAsteroid_130_pchip_f20.pdf, id=21, 433.62pt x 433.62pt>
+<Figures/ROC_StarAsteroid_130_pchip_f20.pdf, id=27, 433.62pt x 433.62pt>
 File: Figures/ROC_StarAsteroid_130_pchip_f20.pdf Graphic file (type pdf)
 
 <use Figures/ROC_StarAsteroid_130_pchip_f20.pdf>
@@ -585,7 +624,7 @@ Package pdftex.def Info: Figures/ROC_StarAsteroid_130_pchip_f20.pdf used on inp
 ut line 67.
 (pdftex.def)             Requested size: 126.61476pt x 126.61334pt.
 
-<Figures/ROC_Triplets_130_pchip_f20.pdf, id=22, 433.62pt x 433.62pt>
+<Figures/ROC_Triplets_130_pchip_f20.pdf, id=28, 433.62pt x 433.62pt>
 File: Figures/ROC_Triplets_130_pchip_f20.pdf Graphic file (type pdf)
 
 <use Figures/ROC_Triplets_130_pchip_f20.pdf>
@@ -600,33 +639,29 @@ Overfull \hbox (5.5358pt too wide) in paragraph at lines 65--69
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 2326) has occurred while \output is active []
-
- [2]
 [3 <./Figures/Simulated_130_12.pdf> <./Figures/TrueTrajectory_130.pdf> <./Figur
 es/Lines_011_016_021.pdf> <./Figures/Lines_011_016_021_026.pdf> <./Figures/Dete
 ctions_Triplets_Color_f15.pdf> <./Figures/Detections_Quad_Color_f15.pdf> <./Fig
 ures/ROC_StarAsteroid_130_pchip_f20.pdf> <./Figures/ROC_Triplets_130_pchip_f20.
-pdf>] <Figures/NEAT1.pdf, id=63, 433.62pt x 433.62pt>
+pdf>] <Figures/NEAT1.pdf, id=66, 433.62pt x 433.62pt>
 File: Figures/NEAT1.pdf Graphic file (type pdf)
  <use Figures/NEAT1.pdf>
 Package pdftex.def Info: Figures/NEAT1.pdf used on input line 137.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
-<Figures/NEAT2.pdf, id=64, 433.62pt x 433.62pt>
+<Figures/NEAT2.pdf, id=67, 433.62pt x 433.62pt>
 File: Figures/NEAT2.pdf Graphic file (type pdf)
  <use Figures/NEAT2.pdf>
 Package pdftex.def Info: Figures/NEAT2.pdf used on input line 138.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
-<Figures/NEAT3.pdf, id=65, 433.62pt x 433.62pt>
+<Figures/NEAT3.pdf, id=68, 433.62pt x 433.62pt>
 File: Figures/NEAT3.pdf Graphic file (type pdf)
  <use Figures/NEAT3.pdf>
 Package pdftex.def Info: Figures/NEAT3.pdf used on input line 139.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
-<Figures/NEATImageReg12.pdf, id=66, 433.62pt x 433.62pt>
+<Figures/NEATImageReg12.pdf, id=69, 433.62pt x 433.62pt>
 File: Figures/NEATImageReg12.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageReg12.pdf>
@@ -637,35 +672,35 @@ File: Figures/NEAT2.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/NEAT2.pdf used on input line 141.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
-<Figures/NEATImageReg32.pdf, id=67, 433.62pt x 433.62pt>
+<Figures/NEATImageReg32.pdf, id=70, 433.62pt x 433.62pt>
 File: Figures/NEATImageReg32.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageReg32.pdf>
 Package pdftex.def Info: Figures/NEATImageReg32.pdf used on input line 142.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
-<Figures/NEATImageDiff1.pdf, id=68, 433.62pt x 433.62pt>
+<Figures/NEATImageDiff1.pdf, id=71, 433.62pt x 433.62pt>
 File: Figures/NEATImageDiff1.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageDiff1.pdf>
 Package pdftex.def Info: Figures/NEATImageDiff1.pdf used on input line 143.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
-<Figures/NEATImageDiff2.pdf, id=69, 433.62pt x 433.62pt>
+<Figures/NEATImageDiff2.pdf, id=72, 433.62pt x 433.62pt>
 File: Figures/NEATImageDiff2.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageDiff2.pdf>
 Package pdftex.def Info: Figures/NEATImageDiff2.pdf used on input line 144.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
-<Figures/NEATImageDiff3.pdf, id=70, 433.62pt x 433.62pt>
+<Figures/NEATImageDiff3.pdf, id=73, 433.62pt x 433.62pt>
 File: Figures/NEATImageDiff3.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageDiff3.pdf>
 Package pdftex.def Info: Figures/NEATImageDiff3.pdf used on input line 145.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
-<Figures/NEATFilteredCentroids1.pdf, id=71, 433.62pt x 433.62pt>
+<Figures/NEATFilteredCentroids1.pdf, id=74, 433.62pt x 433.62pt>
 File: Figures/NEATFilteredCentroids1.pdf Graphic file (type pdf)
 
 <use Figures/NEATFilteredCentroids1.pdf>
@@ -673,7 +708,7 @@ Package pdftex.def Info: Figures/NEATFilteredCentroids1.pdf used on input line
 146.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
-<Figures/NEATFilteredCentroids2.pdf, id=72, 433.62pt x 433.62pt>
+<Figures/NEATFilteredCentroids2.pdf, id=75, 433.62pt x 433.62pt>
 File: Figures/NEATFilteredCentroids2.pdf Graphic file (type pdf)
 
 <use Figures/NEATFilteredCentroids2.pdf>
@@ -681,7 +716,7 @@ Package pdftex.def Info: Figures/NEATFilteredCentroids2.pdf used on input line
 147.
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
-<Figures/NEATFilteredCentroids3.pdf, id=73, 433.62pt x 433.62pt>
+<Figures/NEATFilteredCentroids3.pdf, id=76, 433.62pt x 433.62pt>
 File: Figures/NEATFilteredCentroids3.pdf Graphic file (type pdf)
 
 <use Figures/NEATFilteredCentroids3.pdf>
@@ -690,10 +725,13 @@ Package pdftex.def Info: Figures/NEATFilteredCentroids3.pdf used on input line
 (pdftex.def)             Requested size: 75.96576pt x 75.96404pt.
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 162.
 
-<Figures/NEATLines_LogicalImg.pdf, id=74, 433.62pt x 433.62pt>
+<Figures/NEATLines_LogicalImg.pdf, id=77, 433.62pt x 433.62pt>
 File: Figures/NEATLines_LogicalImg.pdf Graphic file (type pdf)
 
 <use Figures/NEATLines_LogicalImg.pdf>
@@ -701,7 +739,7 @@ Package pdftex.def Info: Figures/NEATLines_LogicalImg.pdf used on input line 16
 8.
 (pdftex.def)             Requested size: 151.93925pt x 151.9413pt.
 
-<Figures/CSS_Triplet_Lines.pdf, id=75, 433.62pt x 433.62pt>
+<Figures/CSS_Triplet_Lines.pdf, id=78, 433.62pt x 433.62pt>
 File: Figures/CSS_Triplet_Lines.pdf Graphic file (type pdf)
 
 <use Figures/CSS_Triplet_Lines.pdf>
@@ -735,7 +773,7 @@ File: Figures/NEAT2.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/NEAT2.pdf used on input line 237.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
 
-<Figures/NEATImageReg22.pdf, id=76, 433.62pt x 433.62pt>
+<Figures/NEATImageReg22.pdf, id=79, 433.62pt x 433.62pt>
 File: Figures/NEATImageReg22.pdf Graphic file (type pdf)
 
 <use Figures/NEATImageReg22.pdf>
@@ -770,17 +808,20 @@ File: Figures/NEATFilteredCentroids3.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/NEATFilteredCentroids3.pdf used on input line 
 244.
 (pdftex.def)             Requested size: 116.48341pt x 116.48347pt.
-) (./main.bbl [4 <./Figures/NEAT1.pdf> <./Figures/NEAT2.pdf> <./Figures/NEAT3.p
-df> <./Figures/NEATImageReg12.pdf> <./Figures/NEATImageReg32.pdf> <./Figures/NE
-ATImageDiff1.pdf> <./Figures/NEATImageDiff2.pdf> <./Figures/NEATImageDiff3.pdf>
- <./Figures/NEATFilteredCentroids1.pdf> <./Figures/NEATFilteredCentroids2.pdf> 
-<./Figures/NEATFilteredCentroids3.pdf> <./Figures/NEATLines_LogicalImg.pdf> <./
-Figures/CSS_Triplet_Lines.pdf>]
+)
+
+LaTeX Warning: Text page 4 contains only floats.
+
+[4 <./Figures/NEAT1.pdf> <./Figures/NEAT2.pdf> <./Figures/NEAT3.pdf> <./Figures
+/NEATImageReg12.pdf> <./Figures/NEATImageReg32.pdf> <./Figures/NEATImageDiff1.p
+df> <./Figures/NEATImageDiff2.pdf> <./Figures/NEATImageDiff3.pdf> <./Figures/NE
+ATFilteredCentroids1.pdf> <./Figures/NEATFilteredCentroids2.pdf> <./Figures/NEA
+TFilteredCentroids3.pdf> <./Figures/NEATLines_LogicalImg.pdf>] (./main.bbl
 Underfull \hbox (badness 1178) in paragraph at lines 36--41
 []\OT1/ptm/m/n/10 Toshifumi Yanag-i-sawa, At-sushi Naka-jima, Ken-ichi
  []
 
-) [5] (./cpu.tex
+) [5 <./Figures/CSS_Triplet_Lines.pdf>] (./cpu.tex
 Overfull \hbox (31.68573pt too wide) detected at line 37
 \OML/cmm/m/it/10 ^^\[] \OT1/cmr/m/n/10 = [] = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/1
 0 414\OML/cmm/m/it/10 sec
@@ -799,31 +840,34 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 13164 strings out of 493117
- 270198 string characters out of 6135433
- 313808 words of memory out of 5000000
- 16351 multiletter control sequences out of 15000+600000
- 20508 words of font info for 44 fonts, out of 8000000 for 9000
+ 13790 strings out of 493117
+ 279154 string characters out of 6135433
+ 321651 words of memory out of 5000000
+ 16953 multiletter control sequences out of 15000+600000
+ 24856 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,56p,2085b,643s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,56p,2085b,647s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-
-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
-/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/ur
-w/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
-mri8a.pfb>
-Output written on main.pdf (7 pages, 588505 bytes).
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-dist/fon
+ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/u
+rw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/
+utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on main.pdf (7 pages, 611555 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 189 PDF objects out of 1000 (max. 8388607)
+ 122 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
