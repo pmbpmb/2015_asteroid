@@ -149,7 +149,7 @@ The list of centroids of moving objects obtained from image differencing defines
 \ForAll{trajectories connecting the first and last frames}	
 \State Find the points of intersection of each trajectory with the middle frames.
 \State Perform range search on the 2d-trees to find a list of detections near this point of intersection within each difference image. 
-\State Perform PCA on this subset of trajectories connecting points from all frames in the sequence. Find the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$. Reject trajectories for which this ratio exceeds a line confidence threshold. Ensure that the distance between projections is proportional to the time interval between images. 
+\State Perform PCA on this subset of trajectories connecting points from all frames in the sequence. Find the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$. Reject trajectories for which this ratio is below a line confidence threshold. Ensure that the distance between projections is proportional to the time interval between images. 
 \EndFor
 \end{algorithmic}
 \label{code}
