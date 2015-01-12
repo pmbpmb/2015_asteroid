@@ -151,15 +151,44 @@ The list of centroids of moving objects obtained from image differencing defines
 \State Form the logical intersection image from all the binary detection images, then perform logical differencing between each detection image and the negative of the intersection image.
 \State Subsequently filter out hollow objects to produce a set of candidate moving objects on each image.  
 \State Form the set of all trajectories connecting the candidate moving object detections from the first and last frame.
-\State Construct 2d-trees for the difference images corresponding to the frames in the middle, excluding the first and last frames. Each node of the tree stores the bounding box of all its children. 
-\ForAll{trajectories connecting the first and last frames}	
-\State Find the points of intersection of each trajectory with the middle frames.
-\State Perform range search on the 2d-trees to find a list of detections near this point of intersection within each difference image. 
-\State Perform PCA on this subset of trajectories connecting points from all frames in the sequence. Find the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$. Reject trajectories for which this ratio is below a line confidence threshold. Ensure that the distance between projections is proportional to the time interval between images. 
-\EndFor
+\State Construct 2d-trees for the difference images corresponding to the frames in the middle, excluding the first and last frames. 
+%Each node of the tree stores the bounding box of all its children. 
+\State{{\bf For all} trajectories connecting the first and last frames {\bf do}}
+\begin{itemize}
+    \item{Find the points of intersection of each trajectory with the middle frames.}
+    \item{Perform range search on the 2d-trees to find a list of detections near this point of intersection within each difference image.}
+    \item{Perform PCA on this subset of trajectories connecting points from all frames in the sequence. Find the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$. Reject trajectories for which this ratio is below a line confidence threshold. Ensure that the distance between projections is proportional to the time interval between images.}
+\end{itemize}     
+%\ForAll{trajectories connecting the first and last frames}	
+%\State Find the points of intersection of each trajectory with the middle frames.
+%\State Perform range search on the 2d-trees to find a list of detections near this point of intersection within each difference image. 
+%\State Perform PCA on this subset of trajectories connecting points from all frames in the sequence. Find the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$. Reject trajectories for which this ratio is below a line confidence threshold. Ensure that the distance between projections is proportional to the time interval between images. 
+%\EndFor
 \end{algorithmic}
 \label{code}
 \end{algorithm}
+
+%\alglanguage{pseudocode}
+%\begin{algorithm}[H]
+%\small
+%\caption{Detection and Linking Algorithm for a sequence of images}
+%\label{algo:Trajectory_Linking}
+%\begin{algorithmic}[1]
+%\State Apply a median filter to each image in the sequence.
+%\State Align all the images to a reference frame (e.g. the second image for a triplet) using Mutual Information based registration.
+%\State Perform thresholding on the registered images using a pre-defined threshold to generate  binary detection images. 
+%\State Form the logical intersection image from all the binary detection images, then perform logical differencing between each detection image and the negative of the intersection image.
+%\State Subsequently filter out hollow objects to produce a set of candidate moving objects on each image.  
+%\State Form the set of all trajectories connecting the candidate moving object detections from the first and last frame.
+%\State Construct 2d-trees for the difference images corresponding to the frames in the middle, excluding the first and last frames. Each node of the tree stores the bounding box of all its children. 
+%\ForAll{trajectories connecting the first and last frames}	
+%\State Find the points of intersection of each trajectory with the middle frames.
+%\State Perform range search on the 2d-trees to find a list of detections near this point of intersection within each difference image. 
+%\State Perform PCA on this subset of trajectories connecting points from all frames in the sequence. Find the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$. Reject trajectories for which this ratio is below a line confidence threshold. Ensure that the distance between projections is proportional to the time interval between images. 
+%\EndFor
+%\end{algorithmic}
+%\label{code}
+%\end{algorithm}
 \vspace{-0.3cm}
 \vspace{-0.3cm}
 \input{Experiments}
