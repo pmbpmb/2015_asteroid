@@ -64,7 +64,7 @@ Asteroids detection, identification.
 \label{sec:intro}
 
 NASA has a congressional mandate to discover all Near-Earth Objects (NEOs) at least 1 kilometer in diameter.  Fortunately, 95\% of the NEOs larger than 1 km that have been discovered are likely not to impact Earth.  
-Near-Earth Object search programs~\cite{stokes2002near} are currently almost exclusively accomplished by Earth-based telescopes such as MIT's LINEAR \cite{evans2003detection}  project, the NEAT~\cite{neat2014} program, the Catalina Sky Survey, or  Pan-STARRS~\cite{denneau2013pan}.  An exception is JPL's spacecraft-based WISE telescope brought out of hibernation to characterize NEOs in the 3.4 and 4.6 micron infrared bands~\cite{wise2014} (called NEOWISE). 
+Near-Earth Object search programs~\cite{stokes2002near} are currently almost exclusively accomplished by Earth-based telescopes such as MIT's LINEAR \cite{evans2003detection}  project, the NEAT~\cite{neat2014} program, the Catalina Sky Survey~\cite{css2014}, or  Pan-STARRS~\cite{denneau2013pan}.  An exception is JPL's spacecraft-based WISE telescope brought out of hibernation to characterize NEOs in the 3.4 and 4.6 micron infrared bands~\cite{wise2014} (called NEOWISE). 
 
 It is notable, however, that the NEO that impacted Chelyabinsk, Russia on 15 February 2013 was only about 17 meters.
 %The impact of a 50 meter asteroid that caused the Tunguska Event of 1908 could have destroyed an entire city or metropolitan area.
@@ -98,7 +98,7 @@ A global thresholding is applied to the registered image for detecting asteroids
 %To mitigate this artifact, we also find connected components and perform filtering of hollow objects as well as filtering based on object size.
 
 {\bf Trajectory Linking}
-The list of centroids of moving objects obtained from image differencing defines a set of candidate rectilinear trajectories.  The goal is to find a subset of centroids that fit a linear model.  The set of filtered centroids potentially has a high number of noisy points (falsely detected movers), and the cardinality of the set of all candidate trajectories increases exponentially with the number of detections, thus requiring subsequent pruning. We therefore combine PCA and 2d-trees to efficiently find trajectories. Unlike MOPS~\cite{denneau2013pan} and CSS\cite{css2014}, we do not set an upper limit on the velocity of the asteroid, and hence do not risk missing fast movers. Given a sequence of images, we form all the possible trajectories connecting the detections in the first and last frames. There are $O(n^2)$ such trajectories, where $n$ is the average number of detections per image. We then calculate the points of intersection of each of these trajectories with all the frames in the middle. A binary space partitioning 2 dimensional tree is constructed from the candidate detections for each of the middle frames(excluding the first and last frames), and we perform a range search on the trees to find a subset of points that lie near the point of intersection in each frame. This query can be done in $O(\log(n))$ time on average. Once we find a collection of such points that potentially form linear trajectories, we perform PCA and compute the ratio of eigenvalues to develop a line confidence score for each candidate trajectory, and choose lines that have high confidence. Using the candidate trajectories thus found, we then enforce temporal ordering by using the sign of the projection on the principal eigenvector.  As a final step, we eliminate false positives by ensuring that the distance between projections is proportional to the time interval between images. 
+The list of centroids of moving objects obtained from image differencing defines a set of candidate rectilinear trajectories.  The goal is to find a subset of centroids that fit a linear model.  The set of filtered centroids potentially has a high number of noisy points (falsely detected movers), and the cardinality of the set of all candidate trajectories increases exponentially with the number of detections, thus requiring subsequent pruning. We therefore combine PCA and 2d-trees to efficiently find trajectories. Unlike MOPS~\cite{denneau2013pan} and CSS\cite{css2014}, we do not set an upper limit on the velocity of the asteroid, and hence do not risk missing fast movers. Given a sequence of images, we form all the possible trajectories connecting the detections in the first and last frames. There are $O(n^2)$ such trajectories, where $n$ is the average number of detections per image. We then calculate the points of intersection of each of these trajectories with all the frames in the middle. A binary space partitioning 2 dimensional tree is constructed from the candidate detections for each of the middle frames(excluding the first and last frames), and we perform a range search on the trees to find a subset of points that lie near the point of intersection in each frame. Each node of the tree stores the bounding box of all its children. The range search query can be done in $O(\log(n))$ time on average. Once we find a collection of such points that potentially form linear trajectories, we perform PCA and compute the ratio of eigenvalues to develop a line confidence score for each candidate trajectory, and choose lines that have high confidence. Using the candidate trajectories thus found, we then enforce temporal ordering by using the sign of the projection on the principal eigenvector.  As a final step, we eliminate false positives by ensuring that the distance between projections is proportional to the time interval between images. 
 %Each node of the tree stores the bounding box of all its children.
 %Compared to a brute force line search of $O(n^3)$ for a triplet of images, our algorithm takes $O(n^2\log(n))$ time.
 
@@ -142,8 +142,9 @@ The list of centroids of moving objects obtained from image differencing defines
 %The list of centroids of moving objects obtained from image differencing defines a set of candidate rectilinear trajectories.  The goal is to find a subset of centroids that fit a linear model. Even though the model is simple, the set of filtered centroids potentially has a high number of noisy points (falsely detected movers), and the cardinality of the set of all candidate trajectories increases exponentially with the number of detections, thus requiring subsequent pruning of this set. We use a combination of PCA and 2d-trees in order to find the trajectories efficiently. Unlike MOPS~\cite{denneau2013pan} and CSS\cite{css2014}, we do not set an upper limit on the velocity of the asteroid, and hence do not risk missing potential fast moving targets. Given a sequence of images, we form all the possible trajectories connecting the detections in the first and last frames. There are $O(n^2)$ trajectories, where $n$ is the number of detections per image. We then find the point of intersection of each of these trajectories with the frames in the middle. We construct a 2 dimensional tree for all the frames in the middle, and perform a range search on the tree to generate the detections that lie within a small radius of the point of intersection. This query can be done on $O(log(n))$ time on average. Once we find a collection of such points that potentially form a linear trajectory, we perform PCA and compute the ratio of eigenvalues, $\lambda_{1}/(\lambda_{1}+ \lambda_{2})$ in order to develop a line confidence score for each candidate trajectory, and choose lines for which this ratio exceeds a threshold. Using the candidate trajectories thus found, we then enforce temporal order of detection by using the sign of the projection on the principal eigenvector.  As the final step, we further eliminate false positives by ensuring that the distance between projections is proportional to the time interval between images. Compared to a brute force line search of $O(n^3)$ for a triplet of images, our algorithm takes $O(n^2log(n))$ time.
 %Compared to a brute force line search ($O(n^k)$, where $k$ is the number of images in the sequence) our algorithm takes $O(n^2log(n))$ time.
 %\renewcommand{\thealgorithm}{}
-\vspace{-0.1cm}
+\vspace{-0.45cm}
 \alglanguage{pseudocode}
+%\vspace{-0.4cm}
 \begin{algorithm}[H]
 \small
 \caption{Detection and Linking Algorithm for a sequence of images}
@@ -152,9 +153,10 @@ The list of centroids of moving objects obtained from image differencing defines
 \State Apply a median filter to each image in the sequence.
 \State Align all the images to a reference frame (e.g. the second image for a triplet) using Mutual Information based registration.
 \State Perform thresholding on the registered images using a pre-defined threshold to generate  binary detection images. 
-\State Form the logical intersection image from all the binary detection images, then perform logical differencing between each detection image and the negative of the intersection image.
+\State Form the logical intersection image from all the binary detection images, then perform logical differencing between each detection image and the common intersection image.
+%\State Form the logical intersection image from all the binary detection images, then perform logical differencing between each detection image and the negative of the intersection image.
 %\State Subsequently filter out hollow objects to produce a set of candidate moving objects on each image.  
-\State Find the connected components in the difference images, Subsequently filter out hollow objects to produce a set of candidate moving objects on each image.
+\State Find the connected components in the difference images, filter out hollow objects based on connected component area and size to produce a set of candidate moving objects on each image.
 \State Form the set of all trajectories connecting the candidate moving object detections from the first and last frame.
 \State Construct 2d-trees for the difference images corresponding to the frames in the middle, excluding the first and last frames. 
 %Each node of the tree stores the bounding box of all its children. 
@@ -171,6 +173,7 @@ The list of centroids of moving objects obtained from image differencing defines
 %\EndFor
 \end{algorithmic}
 \label{code}
+\vspace{-0.2cm}
 \end{algorithm}
 
 %\alglanguage{pseudocode}
@@ -195,7 +198,7 @@ The list of centroids of moving objects obtained from image differencing defines
 %\label{code}
 %\end{algorithm}
 \vspace{-0.3cm}
-\vspace{-0.3cm}
+\vspace{-0.4cm}
 \input{Experiments}
 
 \vspace{-0.3cm}

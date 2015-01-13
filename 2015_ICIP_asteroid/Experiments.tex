@@ -17,13 +17,13 @@
 
 \label{sec:experiments}
 
-We detail the experiments performed using a range of simulated space-based imagery generated using the JHU/APL developed {\em Renderer and Camera Emulator} (RCE) as well as real imagery from the NEAT dataset.  
+We detail the experiments performed using a range of simulated space-based imagery generated using the JHU/APL developed {\em Renderer and Camera Emulator} (RCE) as well as real imagery from the NEAT and Catalina Sky Survey dataset.  
 
 %We  detail experiments using a JHU/APL developed Renderer and Camera Emulator (RCE) to simulate a range of imagery and real imagery from the NEAT dataset.  
 
 %
 \begin{figure}[t]
-\vspace{-0.3cm}
+\vspace{-0.2cm}
 \begin{center}$
 \begin{array}{@{\hspace{0.2em}}c@{\hspace{0.2em}}c@{\hspace{0.2em}}}
 \includegraphics[width=0.23\textwidth]{Figures/Simulated_130_12.pdf} &
@@ -31,11 +31,11 @@ We detail the experiments performed using a range of simulated space-based image
 \end{array}$
 \end{center}
 \vspace{-0.7cm}
-\caption[caption]{Left: An image simulated by RCE. Right: 31 simulated MWIR images super-imposed in order to visualize the trajectory of the asteroid in a single image. The true trajectory can be seen as a faint line towards the top center of the image}
+\caption[caption]{Left: An image simulated by RCE. Right: 31 simulated MWIR images super-imposed in order to visualize the trajectory of the asteroid in a single image. The true trajectory can be seen as a faint line towards the top center of the image.}
 \label{Simulated_Image}
 \end{figure}
 %
-\begin{figure}[h]
+\begin{figure}[!]
 \vspace{-0.3cm}
 \begin{center}$
 \begin{array}{@{\hspace{0.2em}}c@{\hspace{0.2em}}c@{\hspace{0.2em}}}
@@ -59,24 +59,26 @@ We detail the experiments performed using a range of simulated space-based image
 \includegraphics[width=0.25\textwidth]{Figures/Detections_Quad_Color_f20.pdf} 
 \end{array}$
 \end{center}
-\vspace{-0.7cm}
+\vspace{-0.8cm}
 \caption{Left: The number of detections at various stages of the pipeline for triplets of images. Right:  The number of detections at various stages of the pipeline for quadruplets of images.}
 \label{num_detect}
 \end{figure}
+
 \begin{figure}[h]
+\vspace{-0.4cm}
 \begin{center}$
 \begin{array}{@{\hspace{-0.7em}}c@{\hspace{0.2em}}c@{\hspace{0.2em}}}
 \includegraphics[width=0.25\textwidth]{Figures/ROC_StarAsteroid_130_pchip_f20.pdf} &\includegraphics[width=0.25\textwidth]{Figures/ROC_Triplets_130_pchip_f20.pdf} 
 \end{array}$
 \end{center}
-\vspace{-0.7cm}
+\vspace{-0.8cm}
 \caption{Left: ROC curve for the detection of stars and asteroids after the Image thresholding stage of the pipeline. Right:  ROC curve for asteroid detections at the final stage of the pipeline.}
 \label{fig:ROC}
 \vspace{-0.6cm}
 \end{figure} 
 
 
-
+\vspace{-0.4cm}
 \subsection{Simulated Space-Based Imagery}
 \label{ssec:simulated}
 
@@ -110,7 +112,7 @@ Last, we show the Receiver Operating Characteristic (ROC) for simulated space-ba
 %
 %Results for each step of the pipeline are shown:
 % Image Registration in Figure~\ref{}. Logical differencing in Figure~\ref{}. (See Figure ~\ref{} for trajectory detection on an example image triplet).    As is shown in Figure~\ref{}, using trajectory verification on a greater number of images in the sequence allows us to quickly disambiguate and reject false trajectories (in this case this trend is readily apparent when going from a triplet to a quadruplet of images).
-
+\vspace{-0.4cm}
 \subsection{Real Imagery}
 
 \subsubsection{NEAT}
@@ -134,7 +136,7 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 
 \newcommand{\imgWidth}{0.15\textwidth}
 \begin{figure}[h]
-%\vspace{-0.15cm}
+\vspace{-0.3cm}
 \begin{center}$
 \begin{array}{@{\hspace{0.2em}}c@{\hspace{0.3em}}c@{\hspace{0.3em}}c}
 \includegraphics[width=\imgWidth]{Figures/NEAT1.pdf} &
@@ -166,9 +168,9 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 %\minipage{0.40\textwidth}
 %  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
 %\endminipage\hfill
-\vspace{-0.25cm}
+\vspace{-0.3cm}
 \begin{center}
-\includegraphics[width=0.3\textwidth]{Figures/NEATLines_LogicalImg.pdf}
+\includegraphics[width=0.27\textwidth]{Figures/NEATLines_LogicalImg.pdf}
 \end{center}
 \vspace{-0.7cm}
 \caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. 3 Images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
