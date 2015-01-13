@@ -156,7 +156,7 @@ The list of centroids of moving objects obtained from image differencing defines
 \State Form the logical intersection image from all the binary detection images, then perform logical differencing between each detection image and the common intersection image.
 %\State Form the logical intersection image from all the binary detection images, then perform logical differencing between each detection image and the negative of the intersection image.
 %\State Subsequently filter out hollow objects to produce a set of candidate moving objects on each image.  
-\State Find the connected components in the difference images, filter out hollow objects based on connected component area and size to produce a set of candidate moving objects on each image.
+\State Find the connected components in the difference images, filter out hollow objects based on connected component area and extent to produce a set of candidate moving objects on each image.
 \State Form the set of all trajectories connecting the candidate moving object detections from the first and last frame.
 \State Construct 2d-trees for the difference images corresponding to the frames in the middle, excluding the first and last frames. 
 %Each node of the tree stores the bounding box of all its children. 
