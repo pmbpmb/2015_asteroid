@@ -18,7 +18,9 @@
 
 % Title.
 % ------
-\title{NEAR EARTH BODY DETECTION and linking}
+\title{ Autonomous On-board Near Earth Object Detection
+%NEAR EARTH BODY DETECTION and linking
+}
 %
 % Single address.
 % ---------------
@@ -75,7 +77,7 @@ Our focus here is therefore on developing an algorithm that can be hosted on-boa
 %Prior image analysis work for asteroid detection for ground-based image observations is summarized: 
 Notable prior work includes~\cite{denneau2013pan}, describing a reference processing system for detection and identification of asteroids named the Pan-STARRS Moving Object Processing System (MOPS). This pipeline aims at identifying moving objects in our solar system and linking those detections within and between night observations. It attributes those detections to known objects, calculates initial and differentially corrected orbits for linked detections, recovering detections when they exist, and orbit identification. Most proposed pipelines for Earth-based detection include a step to combine images into	 a high S/N static-sky image that is subtracted from the current master image to obtain a difference image containing only transient sources. Examples include \cite{shao2014finding}, where a shift-and-add technique is used to improve  signal to noise ratio and then synthetically creating long exposure images to facilitate the detection of trajectories. A related shift-and-add method using a median  image rather than an average image is reported in~\cite{yanagisawa2005automatic}. A match filter is used for asteroid detection and matching in \cite{gural2005matched}. In \cite{kubica2005variable,kubica2005multiple,kubica2007efficient}, tree based searches (including KD-trees) are used for efficient linking of successive asteroids detections and finding sets of observation points that can be fitted with an inherent motion model, through an exhaustive search for all possible linkages that satisfy the model constraints.
 	
-	This paper describes a small-footprint pipeline (with regard to memory and CPU usage) that can be deployed on a flight-qualified hardware. When compared to prior work, the salient features of this study are its focus on space-based applications. In particular, (a) we use a combination of Principal Component Analysis and 2d-trees to efficiently link detections into trajectories (see Section~\ref{sec:approach} describing our approach); (b) we employ a simulation engine relying on principled optics models to characterize  performance on realistic space-based imagery, along with a combination of real image datasets (NEAT and CSS) (Section~\ref{sec:experiments}).
+	This paper describes a small-footprint pipeline (with regard to memory and CPU usage) that can be deployed on a flight-qualified hardware. When compared to prior work, the salient features of this study are its focus on space-based applications. In particular, (a) we use a combination of Principal Component Analysis (PCA) and 2d-trees to efficiently link detections into trajectories (see Section~\ref{sec:approach} describing our approach); (b) we employ a simulation engine relying on principled optics models to characterize  performance on realistic space-based imagery, along with a combination of real image datasets (NEAT and CSS) (Section~\ref{sec:experiments}).
 		
 %In Section~\ref{sec:approach} we describe a small-footprint pipeline (with regard to memory and CPU usage) that can be deployed on a flight-qualified hardware. This approach uses Principal Component Analysis  to link detections into trajectories. 
 %Since space-based asteroids surveys such as NEOWISE are still rare, 
@@ -203,7 +205,7 @@ The list of centroids of moving objects obtained from image differencing defines
 
 \vspace{-0.3cm}
 \section{CONCLUSION}
-Detecting smaller {\em city-killer} asteroids in space-based surveys is important, as these  are not easily seen in Earth-based surveys. We describe a pipeline for on-board NEO detection and characterize its performance on simulated space-based as well as real imagery and show that quadruplets offer much higher performance with little incidence on complexity. Performance results and preliminary computational requirements are promising with regard to the possible future deployment of this algorithm on spacecraft processors such as the RAD750. 
+Detecting smaller {\em city-killer} asteroids in space-based surveys is important, as these  are not easily seen in Earth-based surveys. We describe a pipeline for on-board NEO detection and characterize its performance on simulated space-based as well as real images and show that quadruplets offer much higher performance with little incidence on complexity. Performance and preliminary computational requirements are promising with regard to the possible future deployment of this algorithm on spacecraft processors such as the RAD750. 
 
 % Below is an example of how to insert images. Delete the ``\vspace'' line,
 % uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
