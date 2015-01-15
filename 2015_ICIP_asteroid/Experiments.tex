@@ -101,7 +101,7 @@ Planck's equation.
  %Therefore, their spectral radiance would look like what is shown in Figure \ref{}(TODO: Add this figure? The plot in the year end report does not have the axes labeled.).  For this 200 K blackbody, the peak in the radiance occurs at a wavelength of 14.5 µm.
  The RCE uses stellar data available as part of the Two Micron All Sky Survey (2MASS), a stellar survey that scanned the entire sky in three IR bands (centered at 1.25 \textmu m, 1.65 \textmu m, and 2.17 \textmu m, respectively).  The 2MASS catalog also incorporates data in two visible bands from other surveys. 
  %
- An example of the simulated MWIR image and the ground truth trajectory derived from one set of simulated imagery is shown in Fig. \ref{Simulated_Image}. 
+ An example of the simulated Mid-wavelength infrared (MWIR) image and the ground truth trajectory derived from one set of simulated imagery is shown in Fig. \ref{Simulated_Image}. 
  %In this figure, the simulated images are super-imposed in order to visualize the asteroid trajectory in a single image. 
  %
  Fig. \ref{Trajectories_Sim} shows the final trajectories detected by our algorithm for one triplet and one quadruplet of the simulated MWIR dataset. As is shown in Fig. \ref{Trajectories_Sim}, using trajectory verification on a greater number of images in the sequence allows us to quickly disambiguate and reject false trajectories. In this case this trend is readily apparent when going from a triplet to a quadruplet of images.
@@ -207,7 +207,7 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 \vspace{-0.7cm}
 \caption{Results shown on CSS data. The registered images are super-imposed to visualize the trajectory in a single image.Asteroid trajectory detected is shown in green, true location of the asteroid is in red. Left: Trajectories detected on a triplet. Right: Trajectory detected on a quadruplet.}
 \label{IPP_Catalina_Layout1}
-\vspace{-0.6cm}
+\vspace{-0.2cm}
 \end{figure} 
 
 %
@@ -355,6 +355,6 @@ shows the final result for one set of earth-based images from CSS.
 %Algorithmic development and results shown earlier were performed in MATLAB. 
 Our approach is to prototype and test algorithms in MATLAB. The algorithms that show promise are then implemented in C++ 
 %The pipeline is being jointly implemented in C++ 
-for benchmarking on a MCP750, a good proxy for the RAD750. The MCP750,  with clock speed of 367 MHz, is completely dedicated to the algorithm and not servicing spacecraft or instrument commands during benchmarking.  Run time for steps 2-8 (not including the 2d-trees) on a quadruplet is about one second. Preliminary tests indicate that 16 MB of RAM is used and the current executable is 1.3 MB. Any preprocessing such as step 1 would be implemented on an FPGA. While further optimization is under way, current results indicate that this algorithm is a viable candidate for a spacecraft processor. The next step is to implement the 2d-trees in C++ for benchmarking.  
+for benchmarking on a MCP750, a good proxy for the RAD750. The MCP750,  with clock speed of 367 MHz, is completely dedicated to the algorithm and not servicing spacecraft or instrument commands during benchmarking.  Run time for steps 2-8 in Algorithm~\ref{code} (not including the 2d-trees) on a quadruplet is about one second. Preliminary tests indicate that 16 MB of RAM is used and the current executable is 1.3 MB. Any preprocessing such as step 1 would be implemented on an FPGA. While further optimization is under way, current results indicate that this algorithm is a viable candidate for a spacecraft processor. The next step is to implement the 2d-trees in C++ for benchmarking.  
 %This pipeline has been developed and tested in MATLAB and has also been jointly implemented in C++ on a recent Intel processor. Preliminary benchmarking on this processor has shown that peak memory usage is of the order 92 MB. Additional preliminary studies for extrapolating CPU and memory usage on an MCP750 -- a good proxy for BAE's RAD750, an operational spacecraft processor -- have led to metrics that seem promising for a possible deployment on a spacecraft architecture. We are now conducting additional work to validate these figures including activities involving the deployment of this algorithm onto a  MCP750  in conjunction with FPGAs. 
 
