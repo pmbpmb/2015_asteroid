@@ -64,18 +64,18 @@ We detail the experiments performed using a range of simulated space-based image
 \label{num_detect}
 \end{figure}
 
-\begin{figure}[h]
-\vspace{-0.2cm}
-\begin{center}$
-\begin{array}{@{\hspace{-0.7em}}c@{\hspace{0.2em}}c@{\hspace{0.2em}}}
-\includegraphics[width=0.25\textwidth]{Figures/ROC_Triplets_130_pchip_f20_LW15_Black.pdf} &\includegraphics[width=0.25\textwidth]{Figures/ROC_Quad_130_f20_LW15_Black.pdf} 
-\end{array}$
-\end{center}
-\vspace{-0.8cm}
-\caption{Left: ROC curve for the detection of stars and asteroids after the image thresholding stage of the pipeline. Right:  ROC curve for asteroid detections at the final stage of the pipeline.}
-\label{fig:ROC}
-\vspace{-0.6cm}
-\end{figure} 
+%\begin{figure}[h]
+%\vspace{-0.2cm}
+%\begin{center}$
+%\begin{array}{@{\hspace{-0.7em}}c@{\hspace{0.2em}}c@{\hspace{0.2em}}}
+%\includegraphics[width=0.25\textwidth]{Figures/ROC_Triplets_130_pchip_f20_LW15_Black.pdf} &\includegraphics[width=0.25\textwidth]{Figures/ROC_Quad_130_f20_LW15_Black.pdf} 
+%\end{array}$
+%\end{center}
+%\vspace{-0.8cm}
+%\caption{Left: ROC curve for the detection of stars and asteroids after the image thresholding stage of the pipeline. Right:  ROC curve for asteroid detections at the final stage of the pipeline.}
+%\label{fig:ROC}
+%\vspace{-0.6cm}
+%\end{figure} 
 
 
 \begin{figure}[!]
@@ -86,11 +86,11 @@ We detail the experiments performed using a range of simulated space-based image
 \end{array}$
 \end{center}
 \vspace{-0.8cm}
-\caption{Left: ROC curve for the detection of stars and asteroids after the image thresholding stage of the pipeline. Right:  ROC curve for asteroid detections at the final stage of the pipeline.}
+\caption{Left:  ROC curve for asteroid detections at the final stage of the pipeline for simulated image triplets. Right:  ROC curve for asteroid detections at the final stage of the pipeline for simulated image quadruplets.}
 \label{fig:ROC}
-\vspace{-0.6cm}
+\vspace{-0.5cm}
 \end{figure} 
-\vspace{-0.4cm}
+\vspace{-0.3cm}
 \subsection{Simulated Space-Based Imagery}
 \label{ssec:simulated}
 
@@ -128,9 +128,9 @@ The right plot in Fig.~\ref{num_detect} shows that the use of quadruplets allows
 %(and hence the number of detections found at the first stage), 
 echoing the results displayed in Fig.~\ref{Trajectories_Sim}. The false positive rate was completely abated in this case.
 %
-Last, we show the Receiver Operating Characteristic (ROC) obtained for triplets in Fig.~\ref{fig:ROC}.   
-Since the use of quadruplets yields no false alarms, we do not show the corresponding ROC curve.
-
+%Last, we show the Receiver Operating Characteristic (ROC) obtained for triplets in Fig.~\ref{fig:ROC}.   
+%Since the use of quadruplets yields no false alarms, we do not show the corresponding ROC curve.
+Last, we show the Receiver Operating Characteristic (ROC) obtained for triplets and quadruplets in Fig.~\ref{fig:ROC}.
 %
 %Results for each step of the pipeline are shown:
 % Image Registration in Figure~\ref{}. Logical differencing in Figure~\ref{}. (See Figure ~\ref{} for trajectory detection on an example image triplet).    As is shown in Figure~\ref{}, using trajectory verification on a greater number of images in the sequence allows us to quickly disambiguate and reject false trajectories (in this case this trend is readily apparent when going from a triplet to a quadruplet of images).
@@ -161,9 +161,9 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 \vspace{-0.3cm}
 \begin{center}$
 \begin{array}{@{\hspace{0.2em}}c@{\hspace{0.3em}}c@{\hspace{0.3em}}c}
-\includegraphics[width=\imgWidth]{Figures/NEAT1.pdf} &
-\includegraphics[width=\imgWidth]{Figures/NEAT2.pdf} &
-\includegraphics[width=\imgWidth]{Figures/NEAT3.pdf} \\
+\includegraphics[width=\imgWidth]{Figures/NEAT_31019_300001.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEAT_31019_300002.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEAT_31019_300003.pdf} \\
 \includegraphics[width=\imgWidth]{Figures/NEATImageReg12.pdf} &
 \includegraphics[width=\imgWidth]{Figures/NEATImageReg22.pdf} &
 \includegraphics[width=\imgWidth]{Figures/NEATImageReg32.pdf} \\
@@ -190,43 +190,44 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 %\minipage{0.40\textwidth}
 %  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
 %\endminipage\hfill
-\vspace{-0.3cm}
+\vspace{-0.4cm}
 \begin{center}
 \includegraphics[width=0.27\textwidth]{Figures/NEATLines_MaxImage_31019_30000.pdf}
 \end{center}
 \vspace{-0.7cm}
-\caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. Three images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
+\caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location of the asteroid is in red. The registered images are super-imposed to visualize the trajectory in a single image. }
 \label{fig:IPP_NEAT_Trajectory}
 \vspace{-0.3cm}
 \end{figure}
 
-\begin{figure}[h]
-%\minipage{0.40\textwidth}
-%  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
-%\endminipage\hfill
-\vspace{-0.3cm}
-\begin{center}
-\includegraphics[width=0.27\textwidth]{Figures/NEATLines_MaxImage_31019_25000.pdf}
-\end{center}
-\vspace{-0.7cm}
-\caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. Three images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
-\label{fig:IPP_NEAT_Trajectory}
-\vspace{-0.3cm}
-\end{figure}
+%\begin{figure}[h]
+%%\minipage{0.40\textwidth}
+%%  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
+%%\endminipage\hfill
+%\vspace{-0.3cm}
+%\begin{center}
+%\includegraphics[width=0.27\textwidth]{Figures/NEATLines_MaxImage_31019_25000.pdf}
+%\end{center}
+%\vspace{-0.7cm}
+%\caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. Three images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
+%\label{fig:IPP_NEAT_Trajectory}
+%\vspace{-0.3cm}
+%\end{figure}
+%
+%\begin{figure}[!]
+%%\minipage{0.40\textwidth}
+%%  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
+%%\endminipage\hfill
+%\vspace{-0.3cm}
+%\begin{center}
+%\includegraphics[width=0.27\textwidth]{Figures/NEATLines_MaxImage_31019_20000.pdf}
+%\end{center}
+%\vspace{-0.7cm}
+%\caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. Three images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
+%\label{fig:IPP_NEAT_Trajectory}
+%\vspace{-0.3cm}
+%\end{figure}
 
-\begin{figure}[!]
-%\minipage{0.40\textwidth}
-%  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
-%\endminipage\hfill
-\vspace{-0.3cm}
-\begin{center}
-\includegraphics[width=0.27\textwidth]{Figures/NEATLines_MaxImage_31019_20000.pdf}
-\end{center}
-\vspace{-0.7cm}
-\caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. Three images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
-\label{fig:IPP_NEAT_Trajectory}
-\vspace{-0.3cm}
-\end{figure}
 %\begin{figure}[h]
 %\vspace{-0.1cm}
 %\begin{center}
@@ -245,7 +246,7 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 \end{array}$
 \end{center}
 \vspace{-0.7cm}
-\caption{Results shown on CSS data. The registered images are super-imposed to visualize the trajectory in a single image. Asteroid trajectory detected is shown in green, true location of the asteroid is in red. Left: Trajectories detected on a triplet. Right: Trajectory detected on a quadruplet.}
+\caption{Results shown on CSS data. Asteroid trajectory detected is shown in green, true location of the asteroid is in red. The registered images are super-imposed to visualize the trajectory in a single image. Left: Trajectories detected on a triplet. Right: Trajectory detected on a quadruplet.}
 \label{IPP_Catalina_Layout1}
 \vspace{-0.2cm}
 \end{figure} 
