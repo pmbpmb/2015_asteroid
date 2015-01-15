@@ -84,16 +84,18 @@ We detail the experiments performed using a range of simulated space-based image
 
 Using RCE, asteroids are  modeled as spherical blackbody-like emitters, 
 %(emissivity is less than 1)
-with a cross-sectional area that approximates the sizes of actual asteroids and surface temperatures typical of sun-illuminated asteroids in an Earth-like orbit.  Similar to the way stars are modeled, the radiation emitted is modeled using a form of Planck's equation:
+with a cross-sectional area that approximates the sizes of actual asteroids and surface temperatures typical of sun-illuminated asteroids in an Earth-like orbit.  Similar to the way stars are modeled, the radiation emitted is modeled using %a form of
+Planck's equation.
 
-\vspace{-0.3cm}
-\begin{equation}
-\label{eq:Planck}
-B_\lambda(T)= \epsilon	\frac{2hc^2}{\lambda^5} \frac{1}{e^{\frac{hc}{\lambda k_BT}} - 1}
-\end{equation}
+%MHC update - removing equation to buy us some space
+%\vspace{-0.3cm}
+%\begin{equation}
+%\label{eq:Planck}
+%B_\lambda(T)= \epsilon	\frac{2hc^2}{\lambda^5} \frac{1}{e^{\frac{hc}{\lambda k_BT}} - 1}
+%\end{equation}
 %\vspace{-0.04cm}
- where $B_\lambda(T)$ is the spectral radiance at a given wavelength $\lambda$ and temperature $T$ %(which in SI units would be $Wm^{-2} m^{-1}$). 
- The value $\epsilon$ is the emissivity of the asteroid, which essentially converts the blackbody spectral radiance into spectral irradiance. The constant, $h$ is the Planck's constant, $c$ is the speed of light, $\lambda$ is wavelength, $k_B$ is the Boltzmann constant, and $T$ is the temperature. 
+% where $B_\lambda(T)$ is the spectral radiance at a given wavelength $\lambda$ and temperature $T$ %(which in SI units would be $Wm^{-2} m^{-1}$). 
+% The value $\epsilon$ is the emissivity of the asteroid, which essentially converts the blackbody spectral radiance into spectral irradiance. The constant, $h$ is the Planck's constant, $c$ is the speed of light, $\lambda$ is wavelength, $k_B$ is the Boltzmann constant, and $T$ is the temperature. 
  
  The asteroids are assumed to have a nominal temperature of 200 K due to solar heating and emissivities in the range from 0.9 to 0.98. 
  %Therefore, their spectral radiance would look like what is shown in Figure \ref{}(TODO: Add this figure? The plot in the year end report does not have the axes labeled.).  For this 200 K blackbody, the peak in the radiance occurs at a wavelength of 14.5 µm.
