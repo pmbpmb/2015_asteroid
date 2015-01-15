@@ -65,10 +65,10 @@ We detail the experiments performed using a range of simulated space-based image
 \end{figure}
 
 \begin{figure}[h]
-\vspace{-1.0cm}
+\vspace{-0.2cm}
 \begin{center}$
 \begin{array}{@{\hspace{-0.7em}}c@{\hspace{0.2em}}c@{\hspace{0.2em}}}
-\includegraphics[width=0.25\textwidth]{Figures/ROC_StarAsteroid_130_pchip_f20_NoTitle_LW15.pdf} &\includegraphics[width=0.25\textwidth]{Figures/ROC_Triplets_130_pchip_f20_NoTitle_LW15.pdf} 
+\includegraphics[width=0.25\textwidth]{Figures/ROC_Triplets_130_pchip_f20_LW15_Black.pdf} &\includegraphics[width=0.25\textwidth]{Figures/ROC_Quad_130_f20_LW15_Black.pdf} 
 \end{array}$
 \end{center}
 \vspace{-0.8cm}
@@ -78,6 +78,18 @@ We detail the experiments performed using a range of simulated space-based image
 \end{figure} 
 
 
+\begin{figure}[!]
+%\vspace{-0.2cm}
+\begin{center}$
+\begin{array}{@{\hspace{-0.7em}}c@{\hspace{0.2em}}c@{\hspace{0.2em}}}
+\includegraphics[width=0.25\textwidth]{Figures/ROC_Triplets_130_pchip_f20_LW15_Blue_FromOrigin.pdf} &\includegraphics[width=0.25\textwidth]{Figures/ROC_Quad_130_f20_LW15_Blue.pdf} 
+\end{array}$
+\end{center}
+\vspace{-0.8cm}
+\caption{Left: ROC curve for the detection of stars and asteroids after the image thresholding stage of the pipeline. Right:  ROC curve for asteroid detections at the final stage of the pipeline.}
+\label{fig:ROC}
+\vspace{-0.6cm}
+\end{figure} 
 \vspace{-0.4cm}
 \subsection{Simulated Space-Based Imagery}
 \label{ssec:simulated}
@@ -153,7 +165,7 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 \includegraphics[width=\imgWidth]{Figures/NEAT2.pdf} &
 \includegraphics[width=\imgWidth]{Figures/NEAT3.pdf} \\
 \includegraphics[width=\imgWidth]{Figures/NEATImageReg12.pdf} &
-\includegraphics[width=\imgWidth]{Figures/NEAT2.pdf} &
+\includegraphics[width=\imgWidth]{Figures/NEATImageReg22.pdf} &
 \includegraphics[width=\imgWidth]{Figures/NEATImageReg32.pdf} \\
 \includegraphics[width=\imgWidth]{Figures/NEATImageDiff1.pdf} &
 \includegraphics[width=\imgWidth]{Figures/NEATImageDiff2.pdf} &
@@ -166,7 +178,7 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 \vspace{-0.7cm}
 \caption[caption]{Image Processing Pipeline results shown on 2002 NEAT data. 
 (row 1):  input image triplet (CY46) taken approx. 10 minutes apart. 
-(row 2): Image Registration. Left: Image-1 registered to Image-2. Right: Image-3 registered to Image-2. 
+(row 2): Image Registration and Thresholding. Left: Image-1 registered to Image-2. Middle: Image-2 after thresholding Right: Image-3 registered to Image-2. 
 %\\\hspace{\textwidth} 
 (row 3): Image Differencing: Artifacts such as crater-like formations are seen in the difference images above. This is the result of some celestial bodies being over-exposed.) 
 %\\\hspace{\textwidth} 
@@ -180,7 +192,7 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 %\endminipage\hfill
 \vspace{-0.3cm}
 \begin{center}
-\includegraphics[width=0.27\textwidth]{Figures/NEATLines_LogicalImg.pdf}
+\includegraphics[width=0.27\textwidth]{Figures/NEATLines_MaxImage_31019_30000.pdf}
 \end{center}
 \vspace{-0.7cm}
 \caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. Three images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
@@ -188,6 +200,33 @@ Fig. \ref{IPP_NEAT_Layout1} and Fig. \ref{fig:IPP_NEAT_Trajectory} show the resu
 \vspace{-0.3cm}
 \end{figure}
 
+\begin{figure}[h]
+%\minipage{0.40\textwidth}
+%  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
+%\endminipage\hfill
+\vspace{-0.3cm}
+\begin{center}
+\includegraphics[width=0.27\textwidth]{Figures/NEATLines_MaxImage_31019_25000.pdf}
+\end{center}
+\vspace{-0.7cm}
+\caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. Three images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
+\label{fig:IPP_NEAT_Trajectory}
+\vspace{-0.3cm}
+\end{figure}
+
+\begin{figure}[!]
+%\minipage{0.40\textwidth}
+%  \includegraphics[width=\linewidth]{Figures/NEATLines_LogicalImg.pdf}
+%\endminipage\hfill
+\vspace{-0.3cm}
+\begin{center}
+\includegraphics[width=0.27\textwidth]{Figures/NEATLines_MaxImage_31019_20000.pdf}
+\end{center}
+\vspace{-0.7cm}
+\caption{Trajectory Detection for the NEAT CY46 Triplet. Asteroid trajectory detected is shown in green. True location is in red. Three images of the triplet are super-imposed here after registration and thresholding for ease of visualization.}
+\label{fig:IPP_NEAT_Trajectory}
+\vspace{-0.3cm}
+\end{figure}
 %\begin{figure}[h]
 %\vspace{-0.1cm}
 %\begin{center}
