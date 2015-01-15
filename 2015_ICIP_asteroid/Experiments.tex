@@ -110,13 +110,14 @@ Planck's equation.
 When testing on a set of 31 triplets or quadruplets taken from simulated space-based imagery, we characterize the algorithm with regard to detections at each of the following three successive stages: the initial detection of objects, the detection of moving objects and the detection of trajectories.
 In Fig.~\ref{num_detect}, we plot the number of detected objects at each step of the pipeline for each selected threshold value. 
 %We can verify that the number of detections monotonically decreases when the threshold increases. Note that we have found that this not always the case, especially since a higher number of detections at the thresholding stage may induce more cancellations at the logical differencing. 
-We note in the right plot in Fig.~\ref{num_detect} that the use of quadruplets allows for a single trajectory to be found irrespective of the number of detections found at prior stages
+%We note in 
+The right plot in Fig.~\ref{num_detect} shows that the use of quadruplets allows for a single trajectory to be found irrespective of the number of detections found at prior stages, 
 %value of the threshold used 
 %(and hence the number of detections found at the first stage), 
-echoing the results displayed in Fig.~\ref{Trajectories_Sim}, and showing that false positive rate can be completely abated in this case.
+echoing the results displayed in Fig.~\ref{Trajectories_Sim}. The false positive rate was completely abated in this case.
 %
 Last, we show the Receiver Operating Characteristic (ROC) obtained for triplets in Fig.~\ref{fig:ROC}.   
-Since the use of quadruplets yields no false alarms we do not show the corresponding ROC curve.
+Since the use of quadruplets yields no false alarms, we do not show the corresponding ROC curve.
 
 %
 %Results for each step of the pipeline are shown:
